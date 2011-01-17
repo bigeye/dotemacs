@@ -1,0 +1,65 @@
+;; Object runcontest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "runcontest/"
+  :tables (list 
+   (semanticdb-table "C1C.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "C1C.cpp"
+    :pointmax 1
+    :fsize 1645
+    :lastmodtime '(19587 35211)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "C2A.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("string.h" include (:system-flag t) nil [20 39])
+            ("n" variable (:type "int") nil [41 47])
+            ("len" variable (:type "int") nil [48 56])
+            ("time" variable
+               (:dereference 1
+                :type "char")
+                nil [57 71])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [81 90])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [91 104]))                  
+                :type "int")
+                nil [72 668]))          
+    :file "C2A.cpp"
+    :pointmax 672
+    :fsize 671
+    :lastmodtime '(19596 58699)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "C2C.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30 39])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40 53]))                  
+                :type "int")
+                nil [21 72]))          
+    :file "C2C.cpp"
+    :pointmax 799
+    :fsize 798
+    :lastmodtime '(19598 16268)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!bigeye!runcontest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

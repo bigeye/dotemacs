@@ -1,0 +1,23 @@
+;; Object site_media/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "site_media/"
+  :tables (list 
+   (semanticdb-table "test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("f" variable nil nil [1 37])
+            ("lines" variable nil nil [38 59])
+            ("cnt" variable nil nil [61 68])
+            ("for" code nil nil [69 167])
+            ("print" code nil nil [167 176]))          
+    :file "test.py"
+    :pointmax 176
+    :fsize 185
+    :lastmodtime '(19587 48440)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!bigeye!run_kaist!runkaist!site_media!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

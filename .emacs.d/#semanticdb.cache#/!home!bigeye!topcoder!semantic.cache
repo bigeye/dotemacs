@@ -1,0 +1,1393 @@
+;; Object topcoder/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "topcoder/"
+  :tables (list 
+   (semanticdb-table "FriendTour.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [3919 3936])
+            ("list" include (:system-flag t) nil [3937 3952])
+            ("map" include (:system-flag t) nil [3953 3967])
+            ("set" include (:system-flag t) nil [3968 3982])
+            ("deque" include (:system-flag t) nil [3983 3999])
+            ("stack" include (:system-flag t) nil [4000 4016])
+            ("bitset" include (:system-flag t) nil [4017 4034])
+            ("algorithm" include (:system-flag t) nil [4035 4055])
+            ("functional" include (:system-flag t) nil [4056 4077])
+            ("numeric" include (:system-flag t) nil [4078 4096])
+            ("utility" include (:system-flag t) nil [4097 4115])
+            ("sstream" include (:system-flag t) nil [4116 4134])
+            ("iostream" include (:system-flag t) nil [4135 4154])
+            ("iomanip" include (:system-flag t) nil [4155 4173])
+            ("cstdio" include (:system-flag t) nil [4174 4191])
+            ("cmath" include (:system-flag t) nil [4192 4208])
+            ("cstdlib" include (:system-flag t) nil [4209 4227])
+            ("ctime" include (:system-flag t) nil [4228 4244])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [4245 4265])
+            ("pb" variable (:constant-flag t) nil [4276 4278])
+            ("mp" variable (:constant-flag t) nil [4297 4299])
+            ("sz" variable (:constant-flag t) nil [4318 4320])
+            ("f" variable (:constant-flag t) nil [4350 4351])
+            ("r" variable (:constant-flag t) nil [4392 4393])
+            ("fe" variable (:constant-flag t) nil [4416 4418])
+            ("re" variable (:constant-flag t) nil [4460 4462])
+            ("fsz" variable (:constant-flag t) nil [4486 4489])
+            ("rsz" variable (:constant-flag t) nil [4518 4521])
+            ("all" variable (:constant-flag t) nil [4546 4549])
+            ("set" variable (:constant-flag t) nil [4579 4582])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [4628 4634]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [4616 4679])
+            ("same" variable (:constant-flag t) nil [4688 4692])
+            ("even" variable (:constant-flag t) nil [4732 4736])
+            ("odd" variable (:constant-flag t) nil [4759 4762])
+            ("FriendTour" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4798 4805])
+                    ("tourProbability" function
+                       (:arguments 
+                          ( ("friends" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [4842 4866])
+                            ("K" variable (:type "int") (reparse-symbol arg-sub-list) [4867 4873]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [4819 4928])
+                    ("public" label nil (reparse-symbol classsubparts) [4949 4956])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [4972 4981]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4958 5225])
+                    ("private" label nil (reparse-symbol classsubparts) [5227 5235])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5278 5297]))                          )
+                        (reparse-symbol classsubparts) [5237 5473])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [5492 5501])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [5502 5525])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [5526 5549]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5475 5788])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [5790 6037])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [6039 6286])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [6288 6547])
+                    ("test_case_3" function (:type "void") (reparse-symbol classsubparts) [6549 6817])
+                    ("test_case_4" function (:type "void") (reparse-symbol classsubparts) [6819 7083]))                  
+                :type "class")
+                nil [4779 7104])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [7138 7147])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7148 7161]))                  
+                :type "int")
+                nil [7129 7287]))          
+    :file "FriendTour.cpp"
+    :pointmax 7304
+    :fsize 7303
+    :lastmodtime '(19595 31932)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "PythTriplets.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [2551 2568])
+            ("list" include (:system-flag t) nil [2569 2584])
+            ("map" include (:system-flag t) nil [2585 2599])
+            ("set" include (:system-flag t) nil [2600 2614])
+            ("deque" include (:system-flag t) nil [2615 2631])
+            ("stack" include (:system-flag t) nil [2632 2648])
+            ("bitset" include (:system-flag t) nil [2649 2666])
+            ("algorithm" include (:system-flag t) nil [2667 2687])
+            ("functional" include (:system-flag t) nil [2688 2709])
+            ("numeric" include (:system-flag t) nil [2710 2728])
+            ("utility" include (:system-flag t) nil [2729 2747])
+            ("sstream" include (:system-flag t) nil [2748 2766])
+            ("iostream" include (:system-flag t) nil [2767 2786])
+            ("iomanip" include (:system-flag t) nil [2787 2805])
+            ("cstdio" include (:system-flag t) nil [2806 2823])
+            ("cmath" include (:system-flag t) nil [2824 2840])
+            ("cstdlib" include (:system-flag t) nil [2841 2859])
+            ("ctime" include (:system-flag t) nil [2860 2876])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [2877 2897])
+            ("pb" variable (:constant-flag t) nil [2908 2910])
+            ("mp" variable (:constant-flag t) nil [2929 2931])
+            ("sz" variable (:constant-flag t) nil [2950 2952])
+            ("f" variable (:constant-flag t) nil [2982 2983])
+            ("r" variable (:constant-flag t) nil [3024 3025])
+            ("fe" variable (:constant-flag t) nil [3048 3050])
+            ("re" variable (:constant-flag t) nil [3092 3094])
+            ("fsz" variable (:constant-flag t) nil [3118 3121])
+            ("rsz" variable (:constant-flag t) nil [3150 3153])
+            ("all" variable (:constant-flag t) nil [3178 3181])
+            ("set" variable (:constant-flag t) nil [3211 3214])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3260 3266]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [3248 3311])
+            ("same" variable (:constant-flag t) nil [3320 3324])
+            ("even" variable (:constant-flag t) nil [3364 3368])
+            ("odd" variable (:constant-flag t) nil [3391 3394])
+            ("adj" variable
+               (:dereference 2
+                :type "int")
+                nil [3409 3434])
+            ("PythTriplets" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3463 3470])
+                    ("findMax" function
+                       (:arguments 
+                          ( ("stick" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [3496 3518]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3484 4368])
+                    ("gcd" function
+                       (:arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [4383 4389])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [4389 4395]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4375 4511])
+                    ("public" label nil (reparse-symbol classsubparts) [4532 4539])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [4555 4564]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4541 4712])
+                    ("private" label nil (reparse-symbol classsubparts) [4714 4722])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4765 4784]))                          )
+                        (reparse-symbol classsubparts) [4724 4960])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [4979 4988])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4989 5009])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5010 5030]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4962 5269])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [5271 5454])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [5456 5634])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [5636 5827]))                  
+                :type "class")
+                nil [3442 5848])
+            ("main" function (:type "int") nil [5877 5967]))          
+    :file "PythTriplets.cpp"
+    :pointmax 6001
+    :fsize 5987
+    :lastmodtime '(19559 44809)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [2554 2571])
+            ("list" include (:system-flag t) nil [2572 2587])
+            ("map" include (:system-flag t) nil [2588 2602])
+            ("set" include (:system-flag t) nil [2603 2617])
+            ("deque" include (:system-flag t) nil [2618 2634])
+            ("stack" include (:system-flag t) nil [2635 2651])
+            ("bitset" include (:system-flag t) nil [2652 2669])
+            ("algorithm" include (:system-flag t) nil [2670 2690])
+            ("functional" include (:system-flag t) nil [2691 2712])
+            ("numeric" include (:system-flag t) nil [2713 2731])
+            ("utility" include (:system-flag t) nil [2732 2750])
+            ("sstream" include (:system-flag t) nil [2751 2769])
+            ("iostream" include (:system-flag t) nil [2770 2789])
+            ("iomanip" include (:system-flag t) nil [2790 2808])
+            ("cstdio" include (:system-flag t) nil [2809 2826])
+            ("cmath" include (:system-flag t) nil [2827 2843])
+            ("cstdlib" include (:system-flag t) nil [2844 2862])
+            ("ctime" include (:system-flag t) nil [2863 2879])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [2880 2900])
+            ("pb" variable (:constant-flag t) nil [2911 2913])
+            ("mp" variable (:constant-flag t) nil [2932 2934])
+            ("sz" variable (:constant-flag t) nil [2953 2955])
+            ("f" variable (:constant-flag t) nil [2985 2986])
+            ("r" variable (:constant-flag t) nil [3027 3028])
+            ("fe" variable (:constant-flag t) nil [3051 3053])
+            ("re" variable (:constant-flag t) nil [3095 3097])
+            ("fsz" variable (:constant-flag t) nil [3121 3124])
+            ("rsz" variable (:constant-flag t) nil [3153 3156])
+            ("all" variable (:constant-flag t) nil [3181 3184])
+            ("set" variable (:constant-flag t) nil [3214 3217])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3263 3269]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [3251 3314])
+            ("same" variable (:constant-flag t) nil [3323 3327])
+            ("even" variable (:constant-flag t) nil [3367 3371])
+            ("odd" variable (:constant-flag t) nil [3394 3397])
+            ("hash" variable (:type "int") nil [3424 3429])
+            ("TheCoffeeTimeDivOne" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3458 3465])
+                    ("find" function
+                       (:arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [3494 3500])
+                            ("tea" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [3501 3518]))                          
+                        :type "long long")
+                        (reparse-symbol classsubparts) [3479 4335])
+                    ("public" label nil (reparse-symbol classsubparts) [4356 4363])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [4379 4388]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4365 4584])
+                    ("private" label nil (reparse-symbol classsubparts) [4586 4594])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4637 4656]))                          )
+                        (reparse-symbol classsubparts) [4596 4832])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [4851 4860])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "long long")
+                                (reparse-symbol arg-sub-list) [4861 4887])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "long long")
+                                (reparse-symbol arg-sub-list) [4888 4914]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4834 5153])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [5155 5339])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [5341 5527])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [5529 5732])
+                    ("test_case_3" function (:type "void") (reparse-symbol classsubparts) [5734 5932]))                  
+                :type "class")
+                nil [3430 5953])
+            ("main" function (:type "int") nil [5982 6079]))          
+    :file "test.cpp"
+    :pointmax 6100
+    :fsize 3949
+    :lastmodtime '(19600 62930)
+    :unmatched-syntax '((punctuation 3422 . 3423) (INT 3419 . 3422) (semantic-list #("(x,with,sizeof(x))" 0 1 (macros (("with") ("x")))) 3415 . 3419) (symbol "memset" 3415 . 3419) (string 2526 . 2551) (number 2523 . 2525) (symbol 2518 . 2522) (punctuation 2517 . 2518))
+    :lexical-table 
+        '(("mp" . ((symbol "make_pair" 2935 . 2944)))
+          ("odd" (spp-arg-list ("a") 3397 . 3400) . ((semantic-list "((a)%2==1)" 3401 . 3411)))
+          ("re" (spp-arg-list ("i" "n") 3097 . 3102) . ((symbol "fe" 3103 . 3105) (semantic-list "(i,0,n)" 3105 . 3112)))
+          ("even" (spp-arg-list ("a") 3371 . 3374) . ((semantic-list "((a)%2==0)" 3375 . 3385)))
+          ("sz" (spp-arg-list ("v") 2955 . 2958) . ((semantic-list "((int)(v).size())" 2959 . 2976)))
+          ("set" (spp-arg-list ("x" "with") 3217 . 3225) . ((symbol "memset" 3226 . 3232) (semantic-list "(x,with,sizeof(x))" 3232 . 3250)))
+          ("same" (spp-arg-list ("a" "b") 3327 . 3332) . ((semantic-list "(fabs((a)-(b))<0.0000001)" 3333 . 3358)))
+          ("r" (spp-arg-list ("i" "n") 3028 . 3033) . ((symbol "f" 3034 . 3035) (semantic-list "(i,0,n)" 3035 . 3042)))
+          ("fsz" (spp-arg-list ("i" "a" "v") 3124 . 3131) . ((symbol "f" 3132 . 3133) (semantic-list "(i,a,sz(v))" 3133 . 3144)))
+          ("all" (spp-arg-list ("v") 3184 . 3187) . 
+              ((symbol "v" 3188 . 3189) (punctuation "." 3189 . 3190) (symbol "begin" 3190 . 3195) (semantic-list "()" 3195 . 3197) (punctuation "," 3197 . 3198) (symbol "v" 3198 . 3199) (punctuation "." 3199 . 3200) (symbol "end" 3200 . 3203) (semantic-list "()" 3203 . 3205)))
+          ("pb" . ((symbol "push_back" 2914 . 2923)))
+          ("f" (spp-arg-list ("i" "a" "b") 2986 . 2993) . ((FOR "for" 2994 . 2997) (semantic-list "(int i=(a);i<(b);++i)" 2997 . 3018)))
+          ("rsz" (spp-arg-list ("i" "v") 3156 . 3161) . ((symbol "r" 3162 . 3163) (semantic-list "(i,sz(v))" 3163 . 3172)))
+          ("fe" (spp-arg-list ("i" "a" "b") 3053 . 3060) . ((FOR "for" 3061 . 3064) (semantic-list "(int i=(a);i<=(b);++i)" 3064 . 3086)))
+          )
+
+    )
+   (semanticdb-table "DirPattern.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [1678 1695])
+            ("list" include (:system-flag t) nil [1696 1711])
+            ("map" include (:system-flag t) nil [1712 1726])
+            ("set" include (:system-flag t) nil [1727 1741])
+            ("deque" include (:system-flag t) nil [1742 1758])
+            ("stack" include (:system-flag t) nil [1759 1775])
+            ("bitset" include (:system-flag t) nil [1776 1793])
+            ("algorithm" include (:system-flag t) nil [1794 1814])
+            ("functional" include (:system-flag t) nil [1815 1836])
+            ("numeric" include (:system-flag t) nil [1837 1855])
+            ("utility" include (:system-flag t) nil [1856 1874])
+            ("sstream" include (:system-flag t) nil [1875 1893])
+            ("iostream" include (:system-flag t) nil [1894 1913])
+            ("iomanip" include (:system-flag t) nil [1914 1932])
+            ("cstdio" include (:system-flag t) nil [1933 1950])
+            ("cmath" include (:system-flag t) nil [1951 1967])
+            ("cstdlib" include (:system-flag t) nil [1968 1986])
+            ("ctime" include (:system-flag t) nil [1987 2003])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [2004 2024])
+            ("pb" variable (:constant-flag t) nil [2035 2037])
+            ("mp" variable (:constant-flag t) nil [2056 2058])
+            ("sz" variable (:constant-flag t) nil [2077 2079])
+            ("f" variable (:constant-flag t) nil [2109 2110])
+            ("r" variable (:constant-flag t) nil [2151 2152])
+            ("fe" variable (:constant-flag t) nil [2175 2177])
+            ("re" variable (:constant-flag t) nil [2219 2221])
+            ("fsz" variable (:constant-flag t) nil [2245 2248])
+            ("rsz" variable (:constant-flag t) nil [2277 2280])
+            ("all" variable (:constant-flag t) nil [2305 2308])
+            ("set" variable (:constant-flag t) nil [2338 2341])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2387 2393]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [2375 2438])
+            ("same" variable (:constant-flag t) nil [2447 2451])
+            ("even" variable (:constant-flag t) nil [2491 2495])
+            ("odd" variable (:constant-flag t) nil [2518 2521])
+            ("DirPattern" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2557 2564])
+                    ("matchFiles" function
+                       (:arguments 
+                          ( ("filenames" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2596 2622]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2578 2715])
+                    ("public" label nil (reparse-symbol classsubparts) [2736 2743])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [2759 2768]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2745 3012])
+                    ("private" label nil (reparse-symbol classsubparts) [3014 3022])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3065 3084]))                          )
+                        (reparse-symbol classsubparts) [3024 3260])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [3279 3288])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3289 3312])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3313 3336]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3262 3575])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [3577 3785])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [3787 4006])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [4008 4267])
+                    ("test_case_3" function (:type "void") (reparse-symbol classsubparts) [4269 4457])
+                    ("test_case_4" function (:type "void") (reparse-symbol classsubparts) [4459 4652]))                  
+                :type "class")
+                nil [2538 4673])
+            ("main" function (:type "int") nil [4702 4790]))          
+    :file "DirPattern.cpp"
+    :pointmax 4811
+    :fsize 4810
+    :lastmodtime '(19559 53569)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("mp" . ((symbol "make_pair" 2059 . 2068)))
+          ("odd" (spp-arg-list ("a") 2521 . 2524) . ((semantic-list "((a)%2==1)" 2525 . 2535)))
+          ("re" (spp-arg-list ("i" "n") 2221 . 2226) . ((symbol "fe" 2227 . 2229) (semantic-list "(i,0,n)" 2229 . 2236)))
+          ("even" (spp-arg-list ("a") 2495 . 2498) . ((semantic-list "((a)%2==0)" 2499 . 2509)))
+          ("sz" (spp-arg-list ("v") 2079 . 2082) . ((semantic-list "((int)(v).size())" 2083 . 2100)))
+          ("set" (spp-arg-list ("x" "with") 2341 . 2349) . ((symbol "memset" 2350 . 2356) (semantic-list "(x,with,sizeof(x))" 2356 . 2374)))
+          ("same" (spp-arg-list ("a" "b") 2451 . 2456) . ((semantic-list "(fabs((a)-(b))<0.0000001)" 2457 . 2482)))
+          ("r" (spp-arg-list ("i" "n") 2152 . 2157) . ((symbol "f" 2158 . 2159) (semantic-list "(i,0,n)" 2159 . 2166)))
+          ("fsz" (spp-arg-list ("i" "a" "v") 2248 . 2255) . ((symbol "f" 2256 . 2257) (semantic-list "(i,a,sz(v))" 2257 . 2268)))
+          ("all" (spp-arg-list ("v") 2308 . 2311) . 
+              ((symbol "v" 2312 . 2313) (punctuation "." 2313 . 2314) (symbol "begin" 2314 . 2319) (semantic-list "()" 2319 . 2321) (punctuation "," 2321 . 2322) (symbol "v" 2322 . 2323) (punctuation "." 2323 . 2324) (symbol "end" 2324 . 2327) (semantic-list "()" 2327 . 2329)))
+          ("pb" . ((symbol "push_back" 2038 . 2047)))
+          ("f" (spp-arg-list ("i" "a" "b") 2110 . 2117) . ((FOR "for" 2118 . 2121) (semantic-list "(int i=(a);i<(b);++i)" 2121 . 2142)))
+          ("rsz" (spp-arg-list ("i" "v") 2280 . 2285) . ((symbol "r" 2286 . 2287) (semantic-list "(i,sz(v))" 2287 . 2296)))
+          ("fe" (spp-arg-list ("i" "a" "b") 2177 . 2184) . ((FOR "for" 2185 . 2188) (semantic-list "(int i=(a);i<=(b);++i)" 2188 . 2210)))
+          )
+
+    )
+   (semanticdb-table "DoorsGame.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [3148 3165])
+            ("list" include (:system-flag t) nil [3166 3181])
+            ("map" include (:system-flag t) nil [3182 3196])
+            ("set" include (:system-flag t) nil [3197 3211])
+            ("deque" include (:system-flag t) nil [3212 3228])
+            ("stack" include (:system-flag t) nil [3229 3245])
+            ("bitset" include (:system-flag t) nil [3246 3263])
+            ("algorithm" include (:system-flag t) nil [3264 3284])
+            ("functional" include (:system-flag t) nil [3285 3306])
+            ("numeric" include (:system-flag t) nil [3307 3325])
+            ("utility" include (:system-flag t) nil [3326 3344])
+            ("sstream" include (:system-flag t) nil [3345 3363])
+            ("iostream" include (:system-flag t) nil [3364 3383])
+            ("iomanip" include (:system-flag t) nil [3384 3402])
+            ("cstdio" include (:system-flag t) nil [3403 3420])
+            ("cmath" include (:system-flag t) nil [3421 3437])
+            ("cstdlib" include (:system-flag t) nil [3438 3456])
+            ("ctime" include (:system-flag t) nil [3457 3473])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [3474 3494])
+            ("pb" variable (:constant-flag t) nil [3505 3507])
+            ("mp" variable (:constant-flag t) nil [3526 3528])
+            ("sz" variable (:constant-flag t) nil [3547 3549])
+            ("f" variable (:constant-flag t) nil [3579 3580])
+            ("r" variable (:constant-flag t) nil [3621 3622])
+            ("fe" variable (:constant-flag t) nil [3645 3647])
+            ("re" variable (:constant-flag t) nil [3689 3691])
+            ("fsz" variable (:constant-flag t) nil [3715 3718])
+            ("rsz" variable (:constant-flag t) nil [3747 3750])
+            ("all" variable (:constant-flag t) nil [3775 3778])
+            ("set" variable (:constant-flag t) nil [3808 3811])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3857 3863]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [3845 3908])
+            ("same" variable (:constant-flag t) nil [3917 3921])
+            ("even" variable (:constant-flag t) nil [3961 3965])
+            ("odd" variable (:constant-flag t) nil [3988 3991])
+            ("DoorsGame" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4026 4033])
+                    ("determineOutcome" function
+                       (:arguments 
+                          ( ("doors" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4068 4081])
+                            ("trophy" variable (:type "int") (reparse-symbol arg-sub-list) [4082 4093]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4047 4183])
+                    ("public" label nil (reparse-symbol classsubparts) [4204 4211])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [4227 4236]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4213 4576])
+                    ("private" label nil (reparse-symbol classsubparts) [4578 4586])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4629 4648]))                          )
+                        (reparse-symbol classsubparts) [4588 4824])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [4843 4852])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4853 4873])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4874 4894]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4826 5133])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [5135 5259])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [5261 5386])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [5388 5514])
+                    ("test_case_3" function (:type "void") (reparse-symbol classsubparts) [5516 5645])
+                    ("test_case_4" function (:type "void") (reparse-symbol classsubparts) [5647 5774])
+                    ("test_case_5" function (:type "void") (reparse-symbol classsubparts) [5776 5902])
+                    ("test_case_6" function (:type "void") (reparse-symbol classsubparts) [5904 6029]))                  
+                :type "class")
+                nil [4008 6050])
+            ("main" function (:type "int") nil [6079 6159]))          
+    :file "DoorsGame.cpp"
+    :pointmax 6180
+    :fsize 6179
+    :lastmodtime '(19595 31977)
+    :unmatched-syntax '((string 3130 . 3145) (number 3127 . 3129) (symbol 3122 . 3126) (punctuation 3121 . 3122) (string 3130 . 3145) (number 3127 . 3129) (symbol 3122 . 3126) (punctuation 3121 . 3122) (string 3130 . 3145) (number 3127 . 3129) (symbol 3122 . 3126) (punctuation 3121 . 3122))
+    :lexical-table 
+        '(("mp" . ((symbol "make_pair" 3529 . 3538)))
+          ("odd" (spp-arg-list ("a") 3991 . 3994) . ((semantic-list "((a)%2==1)" 3995 . 4005)))
+          ("re" (spp-arg-list ("i" "n") 3691 . 3696) . ((symbol "fe" 3697 . 3699) (semantic-list "(i,0,n)" 3699 . 3706)))
+          ("even" (spp-arg-list ("a") 3965 . 3968) . ((semantic-list "((a)%2==0)" 3969 . 3979)))
+          ("sz" (spp-arg-list ("v") 3549 . 3552) . ((semantic-list "((int)(v).size())" 3553 . 3570)))
+          ("set" (spp-arg-list ("x" "with") 3811 . 3819) . ((symbol "memset" 3820 . 3826) (semantic-list "(x,with,sizeof(x))" 3826 . 3844)))
+          ("same" (spp-arg-list ("a" "b") 3921 . 3926) . ((semantic-list "(fabs((a)-(b))<0.0000001)" 3927 . 3952)))
+          ("r" (spp-arg-list ("i" "n") 3622 . 3627) . ((symbol "f" 3628 . 3629) (semantic-list "(i,0,n)" 3629 . 3636)))
+          ("fsz" (spp-arg-list ("i" "a" "v") 3718 . 3725) . ((symbol "f" 3726 . 3727) (semantic-list "(i,a,sz(v))" 3727 . 3738)))
+          ("all" (spp-arg-list ("v") 3778 . 3781) . 
+              ((symbol "v" 3782 . 3783) (punctuation "." 3783 . 3784) (symbol "begin" 3784 . 3789) (semantic-list "()" 3789 . 3791) (punctuation "," 3791 . 3792) (symbol "v" 3792 . 3793) (punctuation "." 3793 . 3794) (symbol "end" 3794 . 3797) (semantic-list "()" 3797 . 3799)))
+          ("pb" . ((symbol "push_back" 3508 . 3517)))
+          ("f" (spp-arg-list ("i" "a" "b") 3580 . 3587) . ((FOR "for" 3588 . 3591) (semantic-list "(int i=(a);i<(b);++i)" 3591 . 3612)))
+          ("rsz" (spp-arg-list ("i" "v") 3750 . 3755) . ((symbol "r" 3756 . 3757) (semantic-list "(i,sz(v))" 3757 . 3766)))
+          ("fe" (spp-arg-list ("i" "a" "b") 3647 . 3654) . ((FOR "for" 3655 . 3658) (semantic-list "(int i=(a);i<=(b);++i)" 3658 . 3680)))
+          )
+
+    )
+   (semanticdb-table "TreesCount.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [28 45])
+            ("list" include (:system-flag t) nil [46 61])
+            ("map" include (:system-flag t) nil [62 76])
+            ("set" include (:system-flag t) nil [77 91])
+            ("deque" include (:system-flag t) nil [92 108])
+            ("stack" include (:system-flag t) nil [109 125])
+            ("bitset" include (:system-flag t) nil [126 143])
+            ("algorithm" include (:system-flag t) nil [144 164])
+            ("functional" include (:system-flag t) nil [165 186])
+            ("numeric" include (:system-flag t) nil [187 205])
+            ("utility" include (:system-flag t) nil [206 224])
+            ("sstream" include (:system-flag t) nil [225 243])
+            ("iostream" include (:system-flag t) nil [244 263])
+            ("iomanip" include (:system-flag t) nil [264 282])
+            ("cstdio" include (:system-flag t) nil [283 300])
+            ("cmath" include (:system-flag t) nil [301 317])
+            ("cstdlib" include (:system-flag t) nil [318 336])
+            ("ctime" include (:system-flag t) nil [337 353])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [354 374])
+            ("pb" variable (:constant-flag t) nil [386 388])
+            ("pb" variable (:constant-flag t) nil [386 388])
+            ("mp" variable (:constant-flag t) nil [407 409])
+            ("sz" variable (:constant-flag t) nil [428 430])
+            ("f" variable (:constant-flag t) nil [460 461])
+            ("r" variable (:constant-flag t) nil [502 503])
+            ("fe" variable (:constant-flag t) nil [526 528])
+            ("re" variable (:constant-flag t) nil [570 572])
+            ("fsz" variable (:constant-flag t) nil [596 599])
+            ("rsz" variable (:constant-flag t) nil [628 631])
+            ("all" variable (:constant-flag t) nil [656 659])
+            ("set" variable (:constant-flag t) nil [689 692])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [738 744]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [726 789])
+            ("same" variable (:constant-flag t) nil [798 802])
+            ("even" variable (:constant-flag t) nil [842 846])
+            ("odd" variable (:constant-flag t) nil [869 872])
+            ("TreesCount" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [909 916])
+                    ("count" function
+                       (:arguments 
+                          ( ("graph" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [929 951]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [919 1779]))                  
+                :type "class")
+                nil [890 1784]))          
+    :file "TreesCount.cpp"
+    :pointmax 1882
+    :fsize 2924
+    :lastmodtime '(19519 3033)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("mp" . ((symbol "make_pair" 408 . 417)))
+          ("odd" (spp-arg-list ("a") 870 . 873) . ((semantic-list "((a)%2==1)" 874 . 884)))
+          ("re" (spp-arg-list ("i" "n") 570 . 575) . ((symbol "fe" 576 . 578) (semantic-list "(i,0,n)" 578 . 585)))
+          ("even" (spp-arg-list ("a") 844 . 847) . ((semantic-list "((a)%2==0)" 848 . 858)))
+          ("sz" (spp-arg-list ("v") 428 . 431) . ((semantic-list "((int)(v).size())" 432 . 449)))
+          ("set" (spp-arg-list ("x" "with") 690 . 698) . ((symbol "memset" 699 . 705) (semantic-list "(x,with,sizeof(x))" 705 . 723)))
+          ("same" (spp-arg-list ("a" "b") 800 . 805) . ((semantic-list "(fabs((a)-(b))<0.0000001)" 806 . 831)))
+          ("r" (spp-arg-list ("i" "n") 501 . 506) . ((symbol "f" 507 . 508) (semantic-list "(i,0,n)" 508 . 515)))
+          ("fsz" (spp-arg-list ("i" "a" "v") 597 . 604) . ((symbol "f" 605 . 606) (semantic-list "(i,a,sz(v))" 606 . 617)))
+          ("all" (spp-arg-list ("v") 657 . 660) . 
+              ((symbol "v" 661 . 662) (punctuation "." 662 . 663) (symbol "begin" 663 . 668) (semantic-list "()" 668 . 670) (punctuation "," 670 . 671) (symbol "v" 671 . 672) (punctuation "." 672 . 673) (symbol "end" 673 . 676) (semantic-list "()" 676 . 678)))
+          ("pb" . ((symbol "push_back" 389 . 398)))
+          ("f" (spp-arg-list ("i" "a" "b") 459 . 466) . ((FOR "for" 467 . 470) (semantic-list "(int i=(a);i<(b);++i)" 470 . 491)))
+          ("rsz" (spp-arg-list ("i" "v") 629 . 634) . ((symbol "r" 635 . 636) (semantic-list "(i,sz(v))" 636 . 645)))
+          ("fe" (spp-arg-list ("i" "a" "b") 526 . 533) . ((FOR "for" 534 . 537) (semantic-list "(int i=(a);i<=(b);++i)" 537 . 559)))
+          )
+
+    )
+   (semanticdb-table "AverageAverage.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [982 999])
+            ("list" include (:system-flag t) nil [1000 1015])
+            ("map" include (:system-flag t) nil [1016 1030])
+            ("set" include (:system-flag t) nil [1031 1045])
+            ("deque" include (:system-flag t) nil [1046 1062])
+            ("stack" include (:system-flag t) nil [1063 1079])
+            ("bitset" include (:system-flag t) nil [1080 1097])
+            ("algorithm" include (:system-flag t) nil [1098 1118])
+            ("functional" include (:system-flag t) nil [1119 1140])
+            ("numeric" include (:system-flag t) nil [1141 1159])
+            ("utility" include (:system-flag t) nil [1160 1178])
+            ("sstream" include (:system-flag t) nil [1179 1197])
+            ("iostream" include (:system-flag t) nil [1198 1217])
+            ("iomanip" include (:system-flag t) nil [1218 1236])
+            ("cstdio" include (:system-flag t) nil [1237 1254])
+            ("cmath" include (:system-flag t) nil [1255 1271])
+            ("cstdlib" include (:system-flag t) nil [1272 1290])
+            ("ctime" include (:system-flag t) nil [1291 1307])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1308 1328])
+            ("pb" variable (:constant-flag t) nil [1339 1341])
+            ("mp" variable (:constant-flag t) nil [1360 1362])
+            ("sz" variable (:constant-flag t) nil [1381 1383])
+            ("all" variable (:constant-flag t) nil [1413 1416])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1450 1456]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [1438 1501])
+            ("same" variable (:constant-flag t) nil [1510 1514])
+            ("even" variable (:constant-flag t) nil [1554 1558])
+            ("odd" variable (:constant-flag t) nil [1581 1584])
+            ("AverageAverage" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1624 1631])
+                    ("average" function
+                       (:arguments 
+                          ( ("numList" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1649 1670]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [1634 1770])
+                    ("public" label nil (reparse-symbol classsubparts) [1793 1800])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [1816 1825]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1802 1973])
+                    ("private" label nil (reparse-symbol classsubparts) [1975 1983])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2026 2045]))                          )
+                        (reparse-symbol classsubparts) [1985 2221])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [2240 2249])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [2250 2273])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [2274 2297]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2223 2536])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [2538 2704])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [2706 2870])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [2872 3043]))                  
+                :type "class")
+                nil [1601 3064])
+            ("main" function (:type "int") nil [3083 3147]))          
+    :file "AverageAverage.cpp"
+    :pointmax 3164
+    :fsize 3163
+    :lastmodtime '(19606 15837)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "LockersDivTwo.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [1239 1256])
+            ("list" include (:system-flag t) nil [1257 1272])
+            ("map" include (:system-flag t) nil [1273 1287])
+            ("set" include (:system-flag t) nil [1288 1302])
+            ("deque" include (:system-flag t) nil [1303 1319])
+            ("stack" include (:system-flag t) nil [1320 1336])
+            ("bitset" include (:system-flag t) nil [1337 1354])
+            ("algorithm" include (:system-flag t) nil [1355 1375])
+            ("functional" include (:system-flag t) nil [1376 1397])
+            ("numeric" include (:system-flag t) nil [1398 1416])
+            ("utility" include (:system-flag t) nil [1417 1435])
+            ("sstream" include (:system-flag t) nil [1436 1454])
+            ("iostream" include (:system-flag t) nil [1455 1474])
+            ("iomanip" include (:system-flag t) nil [1475 1493])
+            ("cstdio" include (:system-flag t) nil [1494 1511])
+            ("cmath" include (:system-flag t) nil [1512 1528])
+            ("cstdlib" include (:system-flag t) nil [1529 1547])
+            ("ctime" include (:system-flag t) nil [1548 1564])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1565 1585])
+            ("pb" variable (:constant-flag t) nil [1596 1598])
+            ("mp" variable (:constant-flag t) nil [1617 1619])
+            ("sz" variable (:constant-flag t) nil [1638 1640])
+            ("LockersDivTwo" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1754 1761])
+                    ("lastOpened" function
+                       (:arguments 
+                          ( ("N" variable (:type "int") (reparse-symbol arg-sub-list) [1790 1796]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1775 2203])
+                    ("public" label nil (reparse-symbol classsubparts) [2224 2231])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [2247 2256]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2233 2404])
+                    ("private" label nil (reparse-symbol classsubparts) [2406 2414])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2457 2476]))                          )
+                        (reparse-symbol classsubparts) [2416 2652])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [2671 2680])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2681 2701])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2702 2722]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2654 2961])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [2963 3053])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [3055 3147])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [3149 3245]))                  
+                :type "class")
+                nil [1732 3266])
+            ("main" function (:type "int") nil [3295 3386]))          
+    :file "LockersDivTwo.cpp"
+    :pointmax 3407
+    :fsize 3406
+    :lastmodtime '(19606 19714)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("mp" . ((symbol "make_pair" 1620 . 1629)))
+          ("sz" (spp-arg-list ("v") 1640 . 1643) . ((semantic-list "((int)(v).size())" 1644 . 1661)))
+          ("pb" . ((symbol "push_back" 1599 . 1608)))
+          )
+
+    )
+   (semanticdb-table "BaseConfusion.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [1630 1647])
+            ("list" include (:system-flag t) nil [1648 1663])
+            ("map" include (:system-flag t) nil [1664 1678])
+            ("set" include (:system-flag t) nil [1679 1693])
+            ("deque" include (:system-flag t) nil [1694 1710])
+            ("stack" include (:system-flag t) nil [1711 1727])
+            ("bitset" include (:system-flag t) nil [1728 1745])
+            ("algorithm" include (:system-flag t) nil [1746 1766])
+            ("functional" include (:system-flag t) nil [1767 1788])
+            ("numeric" include (:system-flag t) nil [1789 1807])
+            ("utility" include (:system-flag t) nil [1808 1826])
+            ("sstream" include (:system-flag t) nil [1827 1845])
+            ("iostream" include (:system-flag t) nil [1846 1865])
+            ("iomanip" include (:system-flag t) nil [1866 1884])
+            ("cstdio" include (:system-flag t) nil [1885 1902])
+            ("cmath" include (:system-flag t) nil [1903 1919])
+            ("cstdlib" include (:system-flag t) nil [1920 1938])
+            ("ctime" include (:system-flag t) nil [1939 1955])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1956 1976])
+            ("pb" variable (:constant-flag t) nil [1987 1989])
+            ("mp" variable (:constant-flag t) nil [2008 2010])
+            ("sz" variable (:constant-flag t) nil [2029 2031])
+            ("f" variable (:constant-flag t) nil [2061 2062])
+            ("r" variable (:constant-flag t) nil [2103 2104])
+            ("fe" variable (:constant-flag t) nil [2127 2129])
+            ("re" variable (:constant-flag t) nil [2171 2173])
+            ("fsz" variable (:constant-flag t) nil [2197 2200])
+            ("rsz" variable (:constant-flag t) nil [2229 2232])
+            ("all" variable (:constant-flag t) nil [2257 2260])
+            ("set" variable (:constant-flag t) nil [2290 2293])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2339 2345]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [2327 2390])
+            ("same" variable (:constant-flag t) nil [2399 2403])
+            ("even" variable (:constant-flag t) nil [2443 2447])
+            ("odd" variable (:constant-flag t) nil [2470 2473])
+            ("LL" type
+               (:typedef ("long long")
+                :superclasses "long long"
+                :type "typedef")
+                nil [2488 2509])
+            ("BaseConfusion" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2533 2540])
+                    ("sum" function
+                       (:arguments 
+                          ( ("M" variable (:type "int") (reparse-symbol arg-sub-list) [2557 2563])
+                            ("N" variable (:type "int") (reparse-symbol arg-sub-list) [2564 2570])
+                            ("B" variable (:type "int") (reparse-symbol arg-sub-list) [2571 2577]))                          
+                        :type "long long")
+                        (reparse-symbol classsubparts) [2543 2588])
+                    ("public" label nil (reparse-symbol classsubparts) [2684 2691])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [2707 2716]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2693 2912])
+                    ("private" label nil (reparse-symbol classsubparts) [2914 2922])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2965 2984]))                          )
+                        (reparse-symbol classsubparts) [2924 3160])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [3179 3188])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "long long")
+                                (reparse-symbol arg-sub-list) [3189 3215])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "long long")
+                                (reparse-symbol arg-sub-list) [3216 3242]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3162 3481])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [3483 3618])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [3620 3754])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [3756 3894])
+                    ("test_case_3" function (:type "void") (reparse-symbol classsubparts) [3896 4046]))                  
+                :type "class")
+                nil [2511 4067])
+            ("main" function (:type "int") nil [4096 4187]))          
+    :file "BaseConfusion.cpp"
+    :pointmax 4208
+    :fsize 4207
+    :lastmodtime '(19600 59319)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("mp" . ((symbol "make_pair" 2011 . 2020)))
+          ("odd" (spp-arg-list ("a") 2473 . 2476) . ((semantic-list "((a)%2==1)" 2477 . 2487)))
+          ("re" (spp-arg-list ("i" "n") 2173 . 2178) . ((symbol "fe" 2179 . 2181) (semantic-list "(i,0,n)" 2181 . 2188)))
+          ("even" (spp-arg-list ("a") 2447 . 2450) . ((semantic-list "((a)%2==0)" 2451 . 2461)))
+          ("sz" (spp-arg-list ("v") 2031 . 2034) . ((semantic-list "((int)(v).size())" 2035 . 2052)))
+          ("set" (spp-arg-list ("x" "with") 2293 . 2301) . ((symbol "memset" 2302 . 2308) (semantic-list "(x,with,sizeof(x))" 2308 . 2326)))
+          ("same" (spp-arg-list ("a" "b") 2403 . 2408) . ((semantic-list "(fabs((a)-(b))<0.0000001)" 2409 . 2434)))
+          ("r" (spp-arg-list ("i" "n") 2104 . 2109) . ((symbol "f" 2110 . 2111) (semantic-list "(i,0,n)" 2111 . 2118)))
+          ("fsz" (spp-arg-list ("i" "a" "v") 2200 . 2207) . ((symbol "f" 2208 . 2209) (semantic-list "(i,a,sz(v))" 2209 . 2220)))
+          ("all" (spp-arg-list ("v") 2260 . 2263) . 
+              ((symbol "v" 2264 . 2265) (punctuation "." 2265 . 2266) (symbol "begin" 2266 . 2271) (semantic-list "()" 2271 . 2273) (punctuation "," 2273 . 2274) (symbol "v" 2274 . 2275) (punctuation "." 2275 . 2276) (symbol "end" 2276 . 2279) (semantic-list "()" 2279 . 2281)))
+          ("pb" . ((symbol "push_back" 1990 . 1999)))
+          ("f" (spp-arg-list ("i" "a" "b") 2062 . 2069) . ((FOR "for" 2070 . 2073) (semantic-list "(int i=(a);i<(b);++i)" 2073 . 2094)))
+          ("rsz" (spp-arg-list ("i" "v") 2232 . 2237) . ((symbol "r" 2238 . 2239) (semantic-list "(i,sz(v))" 2239 . 2248)))
+          ("fe" (spp-arg-list ("i" "a" "b") 2129 . 2136) . ((FOR "for" 2137 . 2140) (semantic-list "(int i=(a);i<=(b);++i)" 2140 . 2162)))
+          )
+
+    )
+   (semanticdb-table "AverageAverage.cpp.bak"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [983 1000])
+            ("list" include (:system-flag t) nil [1001 1016])
+            ("map" include (:system-flag t) nil [1017 1031])
+            ("set" include (:system-flag t) nil [1032 1046])
+            ("deque" include (:system-flag t) nil [1047 1063])
+            ("stack" include (:system-flag t) nil [1064 1080])
+            ("bitset" include (:system-flag t) nil [1081 1098])
+            ("algorithm" include (:system-flag t) nil [1099 1119])
+            ("functional" include (:system-flag t) nil [1120 1141])
+            ("numeric" include (:system-flag t) nil [1142 1160])
+            ("utility" include (:system-flag t) nil [1161 1179])
+            ("sstream" include (:system-flag t) nil [1180 1198])
+            ("iostream" include (:system-flag t) nil [1199 1218])
+            ("iomanip" include (:system-flag t) nil [1219 1237])
+            ("cstdio" include (:system-flag t) nil [1238 1255])
+            ("cmath" include (:system-flag t) nil [1256 1272])
+            ("cstdlib" include (:system-flag t) nil [1273 1291])
+            ("ctime" include (:system-flag t) nil [1292 1308])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1309 1329])
+            ("pb" variable (:constant-flag t) nil [1340 1342])
+            ("mp" variable (:constant-flag t) nil [1361 1363])
+            ("sz" variable (:constant-flag t) nil [1382 1384])
+            ("f" variable (:constant-flag t) nil [1414 1415])
+            ("r" variable (:constant-flag t) nil [1456 1457])
+            ("fe" variable (:constant-flag t) nil [1480 1482])
+            ("re" variable (:constant-flag t) nil [1524 1526])
+            ("fsz" variable (:constant-flag t) nil [1550 1553])
+            ("rsz" variable (:constant-flag t) nil [1582 1585])
+            ("all" variable (:constant-flag t) nil [1610 1613])
+            ("set" variable (:constant-flag t) nil [1643 1646])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1692 1698]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [1680 1743])
+            ("same" variable (:constant-flag t) nil [1752 1756])
+            ("even" variable (:constant-flag t) nil [1796 1800])
+            ("odd" variable (:constant-flag t) nil [1823 1826])
+            ("AverageAverage" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1866 1873])
+                    ("average" function
+                       (:arguments 
+                          ( ("numList" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1891 1912]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [1876 2395])
+                    ("nCm" function
+                       (:arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2409 2415])
+                            ("m" variable (:type "int") (reparse-symbol arg-sub-list) [2416 2422]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [2398 2606])
+                    ("public" label nil (reparse-symbol classsubparts) [2632 2639])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [2655 2664]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2641 2812])
+                    ("private" label nil (reparse-symbol classsubparts) [2814 2822])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2865 2884]))                          )
+                        (reparse-symbol classsubparts) [2824 3060])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [3079 3088])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3089 3112])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3113 3136]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3062 3375])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [3377 3543])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [3545 3709])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [3711 3882]))                  
+                :type "class")
+                nil [1843 3903])
+            ("main" function (:type "int") nil [3932 4024]))          
+    :file "AverageAverage.cpp.bak"
+    :pointmax 4045
+    :fsize 4044
+    :lastmodtime '(19600 58465)
+    :unmatched-syntax '((string 960 . 980) (number 957 . 959) (symbol 952 . 956) (punctuation 951 . 952))
+    :lexical-table 
+        '(("mp" . ((symbol "make_pair" 1364 . 1373)))
+          ("odd" (spp-arg-list ("a") 1826 . 1829) . ((semantic-list "((a)%2==1)" 1830 . 1840)))
+          ("re" (spp-arg-list ("i" "n") 1526 . 1531) . ((symbol "fe" 1532 . 1534) (semantic-list "(i,0,n)" 1534 . 1541)))
+          ("even" (spp-arg-list ("a") 1800 . 1803) . ((semantic-list "((a)%2==0)" 1804 . 1814)))
+          ("sz" (spp-arg-list ("v") 1384 . 1387) . ((semantic-list "((int)(v).size())" 1388 . 1405)))
+          ("set" (spp-arg-list ("x" "with") 1646 . 1654) . ((symbol "memset" 1655 . 1661) (semantic-list "(x,with,sizeof(x))" 1661 . 1679)))
+          ("same" (spp-arg-list ("a" "b") 1756 . 1761) . ((semantic-list "(fabs((a)-(b))<0.0000001)" 1762 . 1787)))
+          ("r" (spp-arg-list ("i" "n") 1457 . 1462) . ((symbol "f" 1463 . 1464) (semantic-list "(i,0,n)" 1464 . 1471)))
+          ("fsz" (spp-arg-list ("i" "a" "v") 1553 . 1560) . ((symbol "f" 1561 . 1562) (semantic-list "(i,a,sz(v))" 1562 . 1573)))
+          ("all" (spp-arg-list ("v") 1613 . 1616) . 
+              ((symbol "v" 1617 . 1618) (punctuation "." 1618 . 1619) (symbol "begin" 1619 . 1624) (semantic-list "()" 1624 . 1626) (punctuation "," 1626 . 1627) (symbol "v" 1627 . 1628) (punctuation "." 1628 . 1629) (symbol "end" 1629 . 1632) (semantic-list "()" 1632 . 1634)))
+          ("pb" . ((symbol "push_back" 1343 . 1352)))
+          ("f" (spp-arg-list ("i" "a" "b") 1415 . 1422) . ((FOR "for" 1423 . 1426) (semantic-list "(int i=(a);i<(b);++i)" 1426 . 1447)))
+          ("rsz" (spp-arg-list ("i" "v") 1585 . 1590) . ((symbol "r" 1591 . 1592) (semantic-list "(i,sz(v))" 1592 . 1601)))
+          ("fe" (spp-arg-list ("i" "a" "b") 1482 . 1489) . ((FOR "for" 1490 . 1493) (semantic-list "(int i=(a);i<=(b);++i)" 1493 . 1515)))
+          )
+
+    )
+   (semanticdb-table "AlienLanguage.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [1997 2014])
+            ("list" include (:system-flag t) nil [2015 2030])
+            ("map" include (:system-flag t) nil [2031 2045])
+            ("set" include (:system-flag t) nil [2046 2060])
+            ("deque" include (:system-flag t) nil [2061 2077])
+            ("stack" include (:system-flag t) nil [2078 2094])
+            ("bitset" include (:system-flag t) nil [2095 2112])
+            ("algorithm" include (:system-flag t) nil [2113 2133])
+            ("functional" include (:system-flag t) nil [2134 2155])
+            ("numeric" include (:system-flag t) nil [2156 2174])
+            ("utility" include (:system-flag t) nil [2175 2193])
+            ("sstream" include (:system-flag t) nil [2194 2212])
+            ("iostream" include (:system-flag t) nil [2213 2232])
+            ("iomanip" include (:system-flag t) nil [2233 2251])
+            ("cstdio" include (:system-flag t) nil [2252 2269])
+            ("cmath" include (:system-flag t) nil [2270 2286])
+            ("cstdlib" include (:system-flag t) nil [2287 2305])
+            ("ctime" include (:system-flag t) nil [2306 2322])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [2323 2343])
+            ("pb" variable (:constant-flag t) nil [2354 2356])
+            ("mp" variable (:constant-flag t) nil [2375 2377])
+            ("sz" variable (:constant-flag t) nil [2396 2398])
+            ("f" variable (:constant-flag t) nil [2428 2429])
+            ("r" variable (:constant-flag t) nil [2470 2471])
+            ("fe" variable (:constant-flag t) nil [2494 2496])
+            ("re" variable (:constant-flag t) nil [2538 2540])
+            ("fsz" variable (:constant-flag t) nil [2564 2567])
+            ("rsz" variable (:constant-flag t) nil [2596 2599])
+            ("all" variable (:constant-flag t) nil [2624 2627])
+            ("set" variable (:constant-flag t) nil [2657 2660])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2706 2712]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [2694 2757])
+            ("same" variable (:constant-flag t) nil [2766 2770])
+            ("even" variable (:constant-flag t) nil [2810 2814])
+            ("odd" variable (:constant-flag t) nil [2837 2840])
+            ("AlienLanguage" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2879 2886])
+                    ("getNumberOfWords" function
+                       (:arguments 
+                          ( ("P" variable (:type "int") (reparse-symbol arg-sub-list) [2921 2927])
+                            ("Q" variable (:type "int") (reparse-symbol arg-sub-list) [2928 2934])
+                            ("N" variable (:type "int") (reparse-symbol arg-sub-list) [2935 2941])
+                            ("M" variable (:type "int") (reparse-symbol arg-sub-list) [2942 2948]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2900 3038])
+                    ("public" label nil (reparse-symbol classsubparts) [3059 3066])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [3082 3091]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3068 3287])
+                    ("private" label nil (reparse-symbol classsubparts) [3289 3297])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3340 3359]))                          )
+                        (reparse-symbol classsubparts) [3299 3535])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [3554 3563])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3564 3584])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3585 3605]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3537 3844])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [3846 4002])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [4004 4165])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [4167 4341])
+                    ("test_case_3" function (:type "void") (reparse-symbol classsubparts) [4343 4521]))                  
+                :type "class")
+                nil [2857 4542])
+            ("main" function (:type "int") nil [4571 4662]))          
+    :file "AlienLanguage.cpp"
+    :pointmax 4683
+    :fsize 4686
+    :lastmodtime '(19545 17093)
+    :unmatched-syntax '((string 1975 . 1994) (number 1972 . 1974) (symbol 1967 . 1971) (punctuation 1966 . 1967))
+    :lexical-table 
+        '(("mp" . ((symbol "make_pair" 2378 . 2387)))
+          ("odd" (spp-arg-list ("a") 2840 . 2843) . ((semantic-list "((a)%2==1)" 2844 . 2854)))
+          ("re" (spp-arg-list ("i" "n") 2540 . 2545) . ((symbol "fe" 2546 . 2548) (semantic-list "(i,0,n)" 2548 . 2555)))
+          ("even" (spp-arg-list ("a") 2814 . 2817) . ((semantic-list "((a)%2==0)" 2818 . 2828)))
+          ("sz" (spp-arg-list ("v") 2398 . 2401) . ((semantic-list "((int)(v).size())" 2402 . 2419)))
+          ("set" (spp-arg-list ("x" "with") 2660 . 2668) . ((symbol "memset" 2669 . 2675) (semantic-list "(x,with,sizeof(x))" 2675 . 2693)))
+          ("same" (spp-arg-list ("a" "b") 2770 . 2775) . ((semantic-list "(fabs((a)-(b))<0.0000001)" 2776 . 2801)))
+          ("r" (spp-arg-list ("i" "n") 2471 . 2476) . ((symbol "f" 2477 . 2478) (semantic-list "(i,0,n)" 2478 . 2485)))
+          ("fsz" (spp-arg-list ("i" "a" "v") 2567 . 2574) . ((symbol "f" 2575 . 2576) (semantic-list "(i,a,sz(v))" 2576 . 2587)))
+          ("all" (spp-arg-list ("v") 2627 . 2630) . 
+              ((symbol "v" 2631 . 2632) (punctuation "." 2632 . 2633) (symbol "begin" 2633 . 2638) (semantic-list "()" 2638 . 2640) (punctuation "," 2640 . 2641) (symbol "v" 2641 . 2642) (punctuation "." 2642 . 2643) (symbol "end" 2643 . 2646) (semantic-list "()" 2646 . 2648)))
+          ("pb" . ((symbol "push_back" 2357 . 2366)))
+          ("f" (spp-arg-list ("i" "a" "b") 2429 . 2436) . ((FOR "for" 2437 . 2440) (semantic-list "(int i=(a);i<(b);++i)" 2440 . 2461)))
+          ("rsz" (spp-arg-list ("i" "v") 2599 . 2604) . ((symbol "r" 2605 . 2606) (semantic-list "(i,sz(v))" 2606 . 2615)))
+          ("fe" (spp-arg-list ("i" "a" "b") 2496 . 2503) . ((FOR "for" 2504 . 2507) (semantic-list "(int i=(a);i<=(b);++i)" 2507 . 2529)))
+          )
+
+    )
+   (semanticdb-table "PotatoGame.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("string" include (:system-flag t) nil [27 44])
+            ("vector" include (:system-flag t) nil [45 62])
+            ("PotatoGame" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [83 90])
+                    ("theWinner" function
+                       (:arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [109 115]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [92 123]))                  
+                :type "class")
+                nil [63 126]))          
+    :file "PotatoGame.cpp"
+    :pointmax 222
+    :fsize 221
+    :lastmodtime '(19521 18064)
+    :unmatched-syntax '((string 10 . 26) (number 7 . 9) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   (semanticdb-table "LockersDivOne.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [1240 1257])
+            ("list" include (:system-flag t) nil [1258 1273])
+            ("map" include (:system-flag t) nil [1274 1288])
+            ("set" include (:system-flag t) nil [1289 1303])
+            ("deque" include (:system-flag t) nil [1304 1320])
+            ("stack" include (:system-flag t) nil [1321 1337])
+            ("bitset" include (:system-flag t) nil [1338 1355])
+            ("algorithm" include (:system-flag t) nil [1356 1376])
+            ("functional" include (:system-flag t) nil [1377 1398])
+            ("numeric" include (:system-flag t) nil [1399 1417])
+            ("utility" include (:system-flag t) nil [1418 1436])
+            ("sstream" include (:system-flag t) nil [1437 1455])
+            ("iostream" include (:system-flag t) nil [1456 1475])
+            ("iomanip" include (:system-flag t) nil [1476 1494])
+            ("cstdio" include (:system-flag t) nil [1495 1512])
+            ("cmath" include (:system-flag t) nil [1513 1529])
+            ("cstdlib" include (:system-flag t) nil [1530 1548])
+            ("ctime" include (:system-flag t) nil [1549 1565])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1566 1586])
+            ("pb" variable (:constant-flag t) nil [1597 1599])
+            ("mp" variable (:constant-flag t) nil [1618 1620])
+            ("sz" variable (:constant-flag t) nil [1639 1641])
+            ("all" variable (:constant-flag t) nil [1671 1674])
+            ("itoa" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1708 1714]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [1696 1759])
+            ("same" variable (:constant-flag t) nil [1768 1772])
+            ("even" variable (:constant-flag t) nil [1812 1816])
+            ("odd" variable (:constant-flag t) nil [1839 1842])
+            ("LockersDivOne" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1881 1888])
+                    ("lastOpened" function
+                       (:arguments 
+                          ( ("N" variable (:type "int") (reparse-symbol arg-sub-list) [1906 1912]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1891 2322])
+                    ("public" label nil (reparse-symbol classsubparts) [2345 2352])
+                    ("run_test" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [2368 2377]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2354 2525])
+                    ("private" label nil (reparse-symbol classsubparts) [2527 2535])
+                    ("print_array" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("V" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2578 2597]))                          )
+                        (reparse-symbol classsubparts) [2537 2773])
+                    ("verify_case" function
+                       (:arguments 
+                          ( ("Case" variable (:type "int") (reparse-symbol arg-sub-list) [2792 2801])
+                            ("Expected" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2802 2822])
+                            ("Received" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2823 2843]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2775 3082])
+                    ("test_case_0" function (:type "void") (reparse-symbol classsubparts) [3084 3174])
+                    ("test_case_1" function (:type "void") (reparse-symbol classsubparts) [3176 3268])
+                    ("test_case_2" function (:type "void") (reparse-symbol classsubparts) [3270 3367]))                  
+                :type "class")
+                nil [1859 3388])
+            ("main" function (:type "int") nil [3407 3470]))          
+    :file "LockersDivOne.cpp"
+    :pointmax 3434
+    :fsize 3486
+    :lastmodtime '(19606 20828)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("mp" . ((symbol "make_pair" 1621 . 1630)))
+          ("odd" (spp-arg-list ("a") 1842 . 1845) . ((semantic-list "((a)%2==1)" 1846 . 1856)))
+          ("even" (spp-arg-list ("a") 1816 . 1819) . ((semantic-list "((a)%2==0)" 1820 . 1830)))
+          ("sz" (spp-arg-list ("v") 1641 . 1644) . ((semantic-list "((int)(v).size())" 1645 . 1662)))
+          ("same" (spp-arg-list ("a" "b") 1772 . 1777) . ((semantic-list "(fabs((a)-(b))<0.0000001)" 1778 . 1803)))
+          ("all" (spp-arg-list ("v") 1674 . 1677) . 
+              ((symbol "v" 1678 . 1679) (punctuation "." 1679 . 1680) (symbol "begin" 1680 . 1685) (semantic-list "()" 1685 . 1687) (punctuation "," 1687 . 1688) (symbol "v" 1688 . 1689) (punctuation "." 1689 . 1690) (symbol "end" 1690 . 1693) (semantic-list "()" 1693 . 1695)))
+          ("pb" . ((symbol "push_back" 1600 . 1609)))
+          )
+
+    )
+   )
+  :file "!home!bigeye!topcoder!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

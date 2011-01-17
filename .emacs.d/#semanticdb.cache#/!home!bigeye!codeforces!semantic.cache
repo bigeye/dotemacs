@@ -1,0 +1,135 @@
+;; Object codeforces/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "codeforces/"
+  :tables (list 
+   (semanticdb-table "pSort.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("n" variable (:type "int") nil [21 27])
+            ("b" variable
+               (:dereference 1
+                :type "int")
+                nil [28 47])
+            ("a" variable
+               (:dereference 1
+                :type "int")
+                nil [28 47])
+            ("c" variable
+               (:dereference 1
+                :type "int")
+                nil [48 59])
+            ("cnt" variable (:type "int") nil [60 70])
+            ("comb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [81 87])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [87 93]))                  
+                :type "void")
+                nil [71 94])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [105 114])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [115 128]))                  
+                :type "int")
+                nil [96 679])
+            ("comb" function
+               (:arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [690 696])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [696 702]))                  
+                :type "void")
+                nil [680 954]))          
+    :file "pSort.cpp"
+    :pointmax 877
+    :fsize 954
+    :lastmodtime '(19603 35863)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "splitproblem.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30 39])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40 53]))                  
+                :type "int")
+                nil [21 380]))          
+    :file "splitproblem.cpp"
+    :pointmax 381
+    :fsize 380
+    :lastmodtime '(19607 30948)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "trafficlights.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "trafficlights.cpp"
+    :pointmax 1
+    :fsize 405
+    :lastmodtime '(19607 32475)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mailstamps.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "mailstamps.cpp"
+    :pointmax 1
+    :fsize 1263
+    :lastmodtime '(19607 35971)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "antonthetree.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cstdio" include (:system-flag t) nil [1 18])
+            ("n" variable (:type "int") nil [20 27])
+            ("a" variable
+               (:dereference 2
+                :type "int")
+                nil [28 49])
+            ("b" variable
+               (:dereference 1
+                :type "int")
+                nil [50 63])
+            ("d" variable
+               (:dereference 1
+                :type "int")
+                nil [65 85])
+            ("cn" variable
+               (:dereference 1
+                :type "int")
+                nil [87 99])
+            ("c" variable
+               (:dereference 2
+                :type "int")
+                nil [100 116])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [126 135])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [136 149]))                  
+                :type "int")
+                nil [117 942]))          
+    :file "antonthetree.cpp"
+    :pointmax 943
+    :fsize 919
+    :lastmodtime '(19607 37611)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!bigeye!codeforces!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

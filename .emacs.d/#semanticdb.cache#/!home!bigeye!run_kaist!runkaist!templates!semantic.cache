@@ -1,0 +1,88 @@
+;; Object templates/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "templates/"
+  :tables (list 
+   (semanticdb-table "contest_page.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("{{start_time}} - {{finish_time}}" section nil nil [114 366])
+            ("Problems : 
+		{% if problems %}
+			{% for problem in problems %}
+
+				{% ifnotequal current_page problem.prob_id %}
+					<a href="/contest{{contest_id}}/{{problem.prob_id}}">{{problem.prob_id}}" section (:members 
+              ( ("{{problem.prob_id}}" anchor nil nil [491 494]))              ) nil [366 730])
+            ("TargetDate="{{finish_time}}";
+				FinishMessage=" Contest is over. | <a href=/contest{{contest_id}}/result/>Result" section (:members 
+              ( ("Result" anchor nil nil [834 837]))              ) nil [730 976])
+            ("|&nbsp;
+			<a href="/contest{{contest_id}}/history/">My History" section (:members 
+              ( ("My History" anchor nil nil [1077 1080])
+                ("Standing" anchor nil nil [1136 1139])
+                ("{{last_submission|safe}}
+			<table align="center" border="1" width="90%" style="border-collapse:collapse" >
+			<tr align=center>
+				<td align=center>Problem" section (:members 
+                  ( ("{{submit.language}}" anchor nil nil [1717 1720])
+                    ("{{bal|safe}}" section (:members 
+                      ( ("LOGIN" anchor nil nil [2981 2984]))                      ) nil [2447 3055]))                  ) nil [1266 3055]))              ) nil [976 3055]))          
+    :file "contest_page.html"
+    :pointmax 3055
+    :fsize 3090
+    :lastmodtime '(19545 33198)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "base.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("RUN @ KAIST | {% block title %}  {% endblock %}" section nil nil [142 288])
+            ("HOME" section (:members 
+              ( ("HOME" anchor nil nil [313 316])
+                ("로그아웃" anchor nil nil [407 410])
+                ("Register" anchor nil nil [447 450])
+                ("로그인" anchor nil nil [486 489])
+                ("{%block head %} {% endblock %}" section nil nil [532 626]))              ) nil [288 626]))          
+    :file "base.html"
+    :pointmax 626
+    :fsize 651
+    :lastmodtime '(19545 33198)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "contest_result.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("{{start_time}} - {{finish_time}}" section nil nil [114 366])
+            ("Problems : 
+		{% if problems %}
+			{% for problem in problems %}
+
+				{% ifnotequal current_page problem.prob_id %}
+					<a href="/contest{{contest_id}}/{{problem.prob_id}}">{{problem.prob_id}}" section (:members 
+              ( ("{{problem.prob_id}}" anchor nil nil [491 494]))              ) nil [366 730])
+            ("TargetDate="{{finish_time}}";
+				FinishMessage=" Contest is over. | <a href=/contest{{contest_id}}/result/>Result" section (:members 
+              ( ("Result" anchor nil nil [834 837]))              ) nil [730 976])
+            ("|&nbsp;
+			<a href="/contest{{contest_id}}/history/">My History" section (:members 
+              ( ("My History" anchor nil nil [1077 1080])
+                ("Standing" anchor nil nil [1136 1139])
+                ("{{last_submission|safe}}
+			<table align="center" border="1" width="90%" style="border-collapse:collapse" >
+			<tr align=center>
+				<td align=center>Problem" section (:members 
+                  ( ("{{submit.language}}" anchor nil nil [1717 1720])
+                    ("PKU {{problem.prob_number}}" anchor nil nil [2482 2485])
+                    ("{{bal|safe}}" section (:members 
+                      ( ("LOGIN" anchor nil nil [3409 3412]))                      ) nil [2875 3483]))                  ) nil [1266 3483]))              ) nil [976 3483]))          
+    :file "contest_result.html"
+    :pointmax 3483
+    :fsize 3518
+    :lastmodtime '(19545 33198)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!bigeye!run_kaist!runkaist!templates!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

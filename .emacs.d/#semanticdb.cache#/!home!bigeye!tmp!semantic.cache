@@ -1,0 +1,34 @@
+;; Object tmp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tmp/"
+  :tables (list 
+   (semanticdb-table "test.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function (:type "int") nil [21 68]))          
+    :file "test.cpp"
+    :pointmax 69
+    :fsize 68
+    :lastmodtime '(19559 45487)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test2.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("vector" include (:system-flag t) nil [20 37])
+            ("string" include (:system-flag t) nil [38 55])
+            ("stdlib.h" include (:system-flag t) nil [56 75])
+            ("main" function (:type "int") nil [77 134]))          
+    :file "test2.cpp"
+    :pointmax 135
+    :fsize 127
+    :lastmodtime '(19559 47735)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!bigeye!tmp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
