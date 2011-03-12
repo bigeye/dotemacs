@@ -1,6 +1,7 @@
 ;;;TODO(donghyun): make graphic mode in eshell using minjhong's dot emacs file
 
-(add-to-list 'load-path "~/.emacs.d")
+(setq my-dotemacs-path "~/dotemacs")
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d"))
 ;; Set Env
 (setenv "PATH"
   (concat
@@ -43,7 +44,7 @@ macros (cf. 'insert-kbd-macro')."
 ;;; Color-theme Settings ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
+(add-to-list 'load-path "/.emacs.d/color-theme-6.6.0")
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-katester)
@@ -288,17 +289,17 @@ and puts spaces between the elements."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; YAsnippet settings ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet-0.6.1c")
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/plugins/yasnippet-0.6.1c"))
 (require 'yasnippet) ;; not yasnippet-bundle
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/plugins/yasnippet-0.6.1c/snippets")
+(yas/load-directory (concat my-dotemacs-path "/.emacs.d/plugins/yasnippet-0.6.1c/snippets"))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; auto-complete 1.3 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
+(add-to-list 'ac-dictionary-directories (concat my-dotemacs-path "/.emacs.d//ac-dict"))
 (ac-config-default)
 (set-face-background 'ac-selection-face "steelblue")
 
@@ -312,14 +313,14 @@ and puts spaces between the elements."
 ;; To customize the background color
 ;;(set-face-background 'highlight-current-line-face "blue")
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; ECB Settings(disabled) ;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;;; ECB Settings(disabled) ;;;
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-"(add-to-list 'load-path '~/.emacs.d/ecb-2.40')
-(load-file '~/.emacs.d/ecb-2.40/ecb.el')
-(require 'ecb)
-(ecb-activate)"
+;; "(add-to-list 'load-path './.emacs.d/ecb-2.40')
+;; (load-file './.emacs.d/ecb-2.40/ecb.el')
+;; (require 'ecb)
+;; (ecb-activate)"
 
 
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -335,7 +336,7 @@ and puts spaces between the elements."
 (defun reload-dotemacs ()
   "Reload .emacs"
   (interactive)
-  (load-file "~/.emacs")
+  (load-file (concat my-dotemacs-path "/myEmacs.el"))
 )
 
 ;; Highlight the current line
