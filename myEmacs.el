@@ -9,7 +9,6 @@
    (getenv "PATH")
   )
 )
-
 ;;Test Key Binding
 (defmacro global-defkey (key def)
 "*Bind KEY globally to DEF.
