@@ -355,7 +355,7 @@ and puts spaces between the elements."
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Multiple Eshell ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;
-(require 'multi-eshell)
+;; (require 'multi-eshell)
 
 
 ;;;;;;;;;;;;;;;;;;;
