@@ -1,3 +1,4 @@
+
 ;;;TODO(donghyun): make graphic mode in eshell using minjhong's dot emacs file
 
 (setq my-dotemacs-path "~/dotemacs")
@@ -370,5 +371,6 @@ and puts spaces between the elements."
 (global-defkey "<RET>" 'newline-and-indent)
 (global-defkey "C-x C-b" 'buffer-menu)
 
-
 (setq-default indent-tabs-mode nil)
+
+(set-variable 'x-select-enable-clipboard t) ;; Make cutting and pasting uses the clipboard
