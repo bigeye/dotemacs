@@ -1,4 +1,3 @@
-
 ;;;TODO(donghyun): make graphic mode in eshell using minjhong's dot emacs file
 
 (setq my-dotemacs-path "~/dotemacs")
@@ -45,7 +44,7 @@ macros (cf. 'insert-kbd-macro')."
 ;;; Color-theme Settings ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "/.emacs.d/color-theme-6.6.0")
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/color-theme-6.6.0"))
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-katester)
