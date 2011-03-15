@@ -1,5 +1,3 @@
-;;;TODO(donghyun): make graphic mode in eshell using minjhong's dot emacs file
-
 (setq my-dotemacs-path "~/dotemacs")
 (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d"))
 ;; Set Env
@@ -373,3 +371,22 @@ and puts spaces between the elements."
 (setq-default indent-tabs-mode nil)
 
 (set-variable 'x-select-enable-clipboard t) ;; Make cutting and pasting uses the clipboard
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; Python mode setting ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-hook 'python-mode-hook (lambda ()
+                              (setq python-indent 2)))
+;;; Line Number
+;;; show line number the cursor is on, in status bar (the mode line)
+;;; set 1 by default
+;;; (line-number-mode 1)
+(global-linum-mode 1)
+
+;; Column Number
+(column-number-mode 1)
+
+;; Don't make backup~ file
+(setq make-backup-files nil)
