@@ -36,6 +36,41 @@ macros (cf. 'insert-kbd-macro')."
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 (setq-default ansi-color-names-vector ["black" "red" "green" "yellow" "blue" "magenta" "cyan" "white" ] )
+(defun eshell/clear ()
+  "Clears the shell buffer"
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)))
+
+(setq eshell-save-history-on-exit t)
+(setq eshell-history-size 512)
+(setq eshell-hist-ignoredups t)
+(setq eshell-cmpl-cycle-completions nil)
+
+;;;; C-a
+;; from ZwaX at EmacsWiki
+;; I use the following code. It makes C-a go to the beginning of the
+;; command line, unless it is already there, in which case it goes to the
+;; beginning of the line. So if you are at the end of the command line
+;; and want to go to the real beginning of line, hit C-a twice:
+(defun eshell-maybe-bol ()
+  (interactive)
+  (let ((p (point)))
+    (eshell-bol)
+    (if (= p (point))
+        (beginning-of-line))))
+
+(add-hook 'eshell-mode-hook
+          '(lambda () (define-key eshell-mode-map "\C-a" 'eshell-maybe-bol)))
+
+;; use ansi-term for these commands
+(add-hook
+ 'eshell-first-time-mode-hook
+ (lambda ()
+   (setq
+    eshell-visual-commands (append '("mutt" "vim" "screen" "ftp" "lftp" "python" "telnet" "ssh")
+                                   eshell-visual-commands))))
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -111,17 +146,45 @@ and puts spaces between the elements."
   "Run the output of compile"
   (interactive)
   (cond ((or (string= mode-name "C++/l") (string= mode-name "C/l"))
-	(shell-command compile-command)
-	(shell-command (concat (my-linux-switch :linux
-						"./"
-						:win
-						"")
-			       (file-name-sans-extension (file-name-nondirectory buffer-file-name))
-			       (my-linux-switch :linux
-						"&"
-						:win
-						".exe&"))))
-	((string= mode-name "Java/l") (ant-call "runserver"))))
+         (if (= (shell-command compile-command "*compilation*") 0)
+             (let ((outbuffer
+                    (concat "* Result of "
+                            (file-name-sans-extension (file-name-nondirectory buffer-file-name))
+                            " *"))
+                   (run-command
+                    (concat (my-linux-switch :linux
+                                             "./"
+                                             :win
+                                             "")
+                            (file-name-sans-extension (file-name-nondirectory buffer-file-name))
+                            (my-linux-switch :linux
+                                             "&"
+                                             :win
+                                             ".exe&")))
+                    proc)
+               (setq proc
+                     (get-buffer-process (get-buffer-create outbuffer)))
+               (if proc
+                   (kill-process proc))
+               (sleep-for 0 60)
+               ;; (unless (get-buffer-window-list outbuffer)
+               ;;     (list
+               ;;      (message "test")
+               ;;      (display-buffer outbuffer t (window-buffer (split-window-vertically))))))
+               ;; ;; (keyboard-quit)
+               (shell-command run-command outbuffer)
+               (switch-to-buffer-other-window outbuffer))
+
+           (let ((compilation-buffer "*compilation*"))
+             (with-current-buffer compilation-buffer
+               (display-buffer compilation-buffer)
+               (compilation-mode))
+             (switch-to-buffer-other-window compilation-buffer)
+             (keyboard-quit))
+           ))
+                             
+        ((string= mode-name "Java/l")
+         (ant-call "runserver"))))
 					;'("clean" "install" "launch")))))
 
 
@@ -337,7 +400,7 @@ and puts spaces between the elements."
   (load-file (concat my-dotemacs-path "/myEmacs.el"))
 )
 
-;; Highlight the current line
+ ;; Highlight the current line
 (when (not console-p) 
   (global-hl-line-mode 1)
   (set-face-background 'highlight "#fff")
@@ -390,3 +453,9 @@ and puts spaces between the elements."
 
 ;; Don't make backup~ file
 (setq make-backup-files nil)
+
+;; Disable Menu Bar
+(menu-bar-mode -1)
+
+;; Disable Tool Bar
+(tool-bar-mode -1)
