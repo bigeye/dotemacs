@@ -459,3 +459,79 @@ and puts spaces between the elements."
 
 ;; Disable Tool Bar
 (tool-bar-mode -1)
+
+;; scroll one line at a time (less "jumpy" than defaults)
+
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
+(setq scroll-conservatively 10000)
+
+
+;; (defun point-of-beginning-of-bottom-line ()
+;;   (save-excursion
+;;     (move-to-window-line -1)
+;;     (point)))
+
+;; (defun point-of-beginning-of-line ()
+;;   (save-excursion
+;;     (beginning-of-line)
+;;     (point)))
+
+;; (defun next-one-line () (interactive)
+;;   (if (= (point-of-beginning-of-bottom-line) (point-of-beginning-of-line))
+;;       (progn (scroll-up 1)
+;;              (next-line 1))
+;;     (next-line 1)))
+
+;; (defun point-of-beginning-of-top-line ()
+;;   (save-excursion
+;;     (move-to-window-line 0)
+;;     (point)))
+
+;; (defun previous-one-line () (interactive)
+;;   (if (= (point-of-beginning-of-top-line) (point-of-beginning-of-line))
+;;       (progn (scroll-down 1)
+;;              (previous-line 1))
+;;     (previous-line 1)))
+
+;; (global-set-key (kbd "<C-n>") 'next-one-line)
+;; (global-set-key (kbd "<C-p>") 'previous-one-line)
+
+;;;;;;;;;;;;;;;;;;;;;
+;;;; CSharp Mode ;;;;
+;;;;;;;;;;;;;;;;;;;;;
+
+(require 'csharp-mode)
+
+(setq auto-mode-alist
+      (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
+(defun my-csharp-mode-fn ()
+  "function that runs when csharp-mode is initialized for a buffer."
+  (local-set-key "\M-\\"   'cscomp-complete-at-point)
+  (local-set-key "\M-\."   'cscomp-complete-at-point-menu)
+)
+(add-hook  'csharp-mode-hook 'my-csharp-mode-fn t)
+
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/semantic"))
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/semantic/bovine"))
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/common"))
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/eieio"))
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/contrib"))
+
+(load "semantic")
+(load "semantic-load")
+(load "wisent-csharp")
+
+(require 'csharp-completion)
+
+(setq erc-default-coding-system 'euc-kr)
+(setq erc-encoding-coding-alist '(
+                                    ("#gnome" . euc-kr)
+                                    ("irc.hanirc.org" . euc-kr)
+                                     ))
