@@ -68,7 +68,7 @@ macros (cf. 'insert-kbd-macro')."
  'eshell-first-time-mode-hook
  (lambda ()
    (setq
-    eshell-visual-commands (append '("mutt" "vim" "screen" "ftp" "lftp" "python" "telnet" "ssh")
+    eshell-visual-commands (append '("mutt" "vim" "screen" "ftp" "lftp" "telnet" "ssh" "tmux")
                                    eshell-visual-commands))))
 
 
@@ -507,31 +507,31 @@ and puts spaces between the elements."
 ;;;; CSharp Mode ;;;;
 ;;;;;;;;;;;;;;;;;;;;;
 
-(require 'csharp-mode)
+;; (require 'csharp-mode)
 
-(setq auto-mode-alist
-      (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
-(defun my-csharp-mode-fn ()
-  "function that runs when csharp-mode is initialized for a buffer."
-  (local-set-key "\M-\\"   'cscomp-complete-at-point)
-  (local-set-key "\M-\."   'cscomp-complete-at-point-menu)
-)
-(add-hook  'csharp-mode-hook 'my-csharp-mode-fn t)
+;; (setq auto-mode-alist
+;;       (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
+;; (defun my-csharp-mode-fn ()
+;;   "function that runs when csharp-mode is initialized for a buffer."
+;;   (local-set-key "\M-\\"   'cscomp-complete-at-point)
+;;   (local-set-key "\M-\."   'cscomp-complete-at-point-menu)
+;; )
+;; (add-hook  'csharp-mode-hook 'my-csharp-mode-fn t)
 
-(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/semantic"))
-(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/semantic/bovine"))
-(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/common"))
-(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/eieio"))
-(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/contrib"))
+;; (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/semantic"))
+;; (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/semantic/bovine"))
+;; (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/common"))
+;; (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/eieio"))
+;; (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/cedet/contrib"))
 
-(load "semantic")
-(load "semantic-load")
-(load "wisent-csharp")
+;; (load "semantic")
+;; (load "semantic-load")
+;; (load "wisent-csharp")
 
-(require 'csharp-completion)
+;; (require 'csharp-completion)
 
-(setq erc-default-coding-system 'euc-kr)
-(setq erc-encoding-coding-alist '(
-                                    ("#gnome" . euc-kr)
-                                    ("irc.hanirc.org" . euc-kr)
-                                     ))
+;; (setq erc-default-coding-system 'euc-kr)
+;; (setq erc-encoding-coding-alist '(
+;;                                     ("#gnome" . euc-kr)
+;;                                     ("irc.hanirc.org" . euc-kr)
+;;                                      ))
