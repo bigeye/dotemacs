@@ -535,3 +535,60 @@ and puts spaces between the elements."
 ;;                                     ("#gnome" . euc-kr)
 ;;                                     ("irc.hanirc.org" . euc-kr)
 ;;                                      ))
+
+
+
+;;;;;;;;;;;;
+;; Indent ;;
+;;;;;;;;;;;;
+
+;; (setq-default c-basic-offset 2
+;;               js-indent-level 2
+;;               css-indent-offset 2
+;;               mumamo-submode-indent-offset 2
+;;               tab-width 2)
+
+;; (setq-default indent-tabs-mode nil)
+
+(defun pear/php-mode-init()
+  "Set some buffer-local variables."
+  (setq case-fold-search t)
+  (c-set-offset 'arglist-intro '+)
+  (c-set-offset 'arglist-close '0)
+)
+
+(add-hook 'php-mode-hook 'pear/php-mode-init)
+
+
+;; ;;;;;;;;;;;;
+;; ;; NXHTML ;;
+;; ;;;;;;;;;;;;
+
+;; (load (concat my-dotemacs-path "/.emacs.d/nxhtml/autostart.el"))
+(require 'nxml-mode)
+(setq mumamo-background-colors nil)
+(add-hook 'nxml-mode-hook
+          (lambda ()
+            (rng-validate-mode 0))
+          t)
+
+
+;; ;;;;;;;;;;;;;;
+;; ;; PHP Mode ;;
+;; ;;;;;;;;;;;;;;
+(autoload 'php-mode "php-mode" "Major mode for editing php code." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.ctp\\'" . nxhtml-mumamo-mode))
+;; (add-to-list 'auto-mode-alist '("\\.php?\\'" . php-mode))
+
+
+;; ;;;;;;;;;;;;;;;;;
+;; ;;; Haml Mode ;;;
+;; ;;;;;;;;;;;;;;;;;
+
+(require 'haml-mode)
+
+(add-hook 'haml-mode-hook
+          '(lambda ()
+             (setq indent-tabs-mode nil)
+             (define-key haml-mode-map "\C-m" 'newline-and-indent)))
