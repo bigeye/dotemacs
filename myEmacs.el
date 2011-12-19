@@ -381,7 +381,6 @@ and puts spaces between the elements."
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;;; ECB Settings(disabled) ;;;
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;; "(add-to-list 'load-path './.emacs.d/ecb-2.40')
 ;; (load-file './.emacs.d/ecb-2.40/ecb.el')
 ;; (require 'ecb)
@@ -602,3 +601,43 @@ and puts spaces between the elements."
           '(lambda ()
              (setq indent-tabs-mode nil)
              (define-key haml-mode-map "\C-m" 'newline-and-indent)))
+
+;;;;;;;;;;;;;;;;;;;;;;
+;; ELIM (IM Client) ;;
+;;;;;;;;;;;;;;;;;;;;;;
+
+;; (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/elim/elisp"))
+;; (autoload 'garak "garak" nil t)
+;; (setq tree-widget-image-enable t)
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Jabber
+;;;
+
+(add-to-list 'load-path
+             (concat my-dotemacs-path "/.emacs.d/emacs-jabber-0.8.90"))
+(require 'jabber-autoloads)
+(setq jabber-account-list '(
+                            ("bigeyeguy@gmail.com"
+                             (:password . "")
+                             (:network-server . "talk.google.com")
+                             (:port . 443)
+                             (:connection-type . ssl))
+                            )
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(jabber-auto-reconnect t)
+ '(jabber-avatar-verbose nil)
+ '(jabber-vcard-avatars-retrieve nil)
+ '(jabber-chat-buffer-format "*-Jabber-%n-*")
+ '(jabber-history-enabled t)
+ '(jabber-mode-line-mode t)
+ '(jabber-roster-buffer "*-Jabber-*")
+ '(jabber-roster-line-format " %c %-25n %u %-8s (%r)")
+ '(jabber-show-offline-contacts nil)
+ '(jabber-show-resources nil)
+ '(jabber-roster-show-bindings nil)
+ '(jabber-roster-show-title nil))
