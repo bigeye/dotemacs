@@ -381,6 +381,7 @@ and puts spaces between the elements."
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;;; ECB Settings(disabled) ;;;
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; "(add-to-list 'load-path './.emacs.d/ecb-2.40')
 ;; (load-file './.emacs.d/ecb-2.40/ecb.el')
 ;; (require 'ecb)
@@ -602,6 +603,7 @@ and puts spaces between the elements."
              (setq indent-tabs-mode nil)
              (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; ELIM (IM Client) ;;
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -641,3 +643,11 @@ and puts spaces between the elements."
  '(jabber-show-resources nil)
  '(jabber-roster-show-bindings nil)
  '(jabber-roster-show-title nil))
+
+(if (eq system-type 'darwin)
+  (progn
+    (setq mac-option-key-is-meta nil)
+    (setq mac-command-key-is-meta t)
+    (setq mac-command-modifier 'meta)
+    (setq mac-option-modifier nil))
+  )
