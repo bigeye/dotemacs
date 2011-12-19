@@ -35,7 +35,8 @@ macros (cf. 'insert-kbd-macro')."
 
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-(setq-default ansi-color-names-vector ["black" "red" "green" "yellow" "blue" "magenta" "cyan" "white" ] )
+(setq-default ansi-color-names-vector
+              ["black" "red" "green" "yellow" "blue" "magenta" "cyan" "white" ])
 (defun eshell/clear ()
   "Clears the shell buffer"
   (interactive)
@@ -67,9 +68,9 @@ macros (cf. 'insert-kbd-macro')."
 (add-hook
  'eshell-first-time-mode-hook
  (lambda ()
-   (setq
-    eshell-visual-commands (append '("mutt" "vim" "screen" "ftp" "lftp" "telnet" "ssh" "tmux")
-                                   eshell-visual-commands))))
+   (setq eshell-visual-commands
+         (append '("mutt" "vim" "screen" "ftp" "lftp" "telnet" "ssh" "tmux")
+                 eshell-visual-commands))))
 
 
 
@@ -99,10 +100,12 @@ macros (cf. 'insert-kbd-macro')."
 	       (< (length updir) (length (file-truename directory))))
 	  (file-search-upward updir file)
 	nil))))
+
 (defun join-string-list (string-list)
     "Concatenates a list of strings
 and puts spaces between the elements."
     (format "" "~{~A~^ ~}" string-list))
+
 (defun ant-call (&optional args)
   "Call Ant's build.xml"
   (interactive "MAnt Target:")
@@ -182,10 +185,10 @@ and puts spaces between the elements."
              (switch-to-buffer-other-window compilation-buffer)
              (keyboard-quit))
            ))
-                             
+
         ((string= mode-name "Java/l")
          (ant-call "runserver"))))
-					;'("clean" "install" "launch")))))
+                                        ;'("clean" "install" "launch")))))
 
 
 (global-defkey "<C-f7>" 'compile)
@@ -197,8 +200,8 @@ and puts spaces between the elements."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'java-complete)
 (add-hook 'java-mode-hook (lambda ()
-			    (setq c-basic-offset 2)
-			    (local-set-key (kbd "C-<tab>") 'java-complete)))
+                            (setq c-basic-offset 2)
+                            (local-set-key (kbd "C-<tab>") 'java-complete)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;;; C mode Settings ;;;
@@ -216,16 +219,17 @@ and puts spaces between the elements."
                                     (cond ((string= mode-name "C++/l") "g++")
                                           ((string= mode-name "C/l") "gcc"))
                                     :win
-				    (cond ((string= mode-name "C++/l") "g++")
+                                    (cond ((string= mode-name "C++/l") "g++")
                                           ((string= mode-name "C/l") "gcc")))
                    " -O2 -lm "
-		   (file-name-nondirectory buffer-file-name)
-		   " -o "
-		   (file-name-sans-extension (file-name-nondirectory buffer-file-name))
-		   (my-linux-switch :linux
-				    ""
+                   (file-name-nondirectory buffer-file-name)
+                   " -o "
+                   (file-name-sans-extension
+                    (file-name-nondirectory buffer-file-name))
+                   (my-linux-switch :linux
+                                    ""
                                     :win
-				    ".exe"))))
+                                    ".exe"))))
 )
 
 
@@ -400,12 +404,18 @@ and puts spaces between the elements."
   (load-file (concat my-dotemacs-path "/myEmacs.el"))
 )
 
- ;; Highlight the current line
-(when (not console-p) 
-  (global-hl-line-mode 1)
-  (set-face-background 'highlight "#fff")
-)
+;; Highlight the current line
+;; (when (not console-p)
+(global-hl-line-mode 1)
+(set-face-background 'highlight "#fff")
+;; )
 
+;; Turn on whitespace-mode
+(global-whitespace-mode 1)
+(setq whitespace-style
+      (quote
+       (face tabs spaces trailing lines space-before-tab newline indentation
+             empty space-after-tab space-mark tab-mark)))
 
 ; If non-nil, `kill-line' with no arg at beg of line kills the whole line.
 ;(setq kill-whole-line nil)
@@ -592,3 +602,11 @@ and puts spaces between the elements."
           '(lambda ()
              (setq indent-tabs-mode nil)
              (define-key haml-mode-map "\C-m" 'newline-and-indent)))
+
+(if (eq system-type 'darwin)
+  (progn
+    (setq mac-option-key-is-meta nil)
+    (setq mac-command-key-is-meta t)
+    (setq mac-command-modifier 'meta)
+    (setq mac-option-modifier nil))
+  )
