@@ -612,111 +612,45 @@ and puts spaces between the elements."
 ;; (setq tree-widget-image-enable t)
 
 
-;;;;;;;
-;;; hexrgb (only for mac)
-;;;;;
-
-(require 'hexrgb)
-
-;;;;;;;;;;;;;;;;;;;;;
-;; Jabber
-;;;;;;;;;;
-
-(add-to-list 'load-path
-             (concat my-dotemacs-path "/.emacs.d/emacs-jabber-0.8.90"))
-(require 'jabber-autoloads)
-
-(setq jabber-account-list '(
-                            ("bigeyeguy@gmail.com"
-                             (:password . "dj4067cg*")
-                             (:network-server . "talk.google.com")
-                             (:port . 443)
-                             (:connection-type . ssl))
-                            ("bigeye@adby.me"
-                             (:password . "dong0811")
-                             (:network-server . "talk.google.com")
-                             (:port . 443)
-                             (:connection-type . ssl))
-                            ))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(jabber-auto-reconnect t)
- '(jabber-avatar-verbose nil)
- '(jabber-vcard-avatars-retrieve nil)
- '(jabber-chat-buffer-format "*-Jabber-%n-*")
- '(jabber-history-enabled t)
- '(jabber-mode-line-mode t)
- '(jabber-roster-buffer "*-Jabber-*")
- '(jabber-roster-line-format " %c %-25n %u %-8s (%r)")
- '(jabber-show-offline-contacts nil)
- '(jabber-show-resources nil)
- '(jabber-roster-show-bindings nil)
- '(jabber-roster-show-title nil))
+;;;;;;;;;;;;;;;;;;;;;;
+;;;     Jabber     ;;;
+;;;;;;;;;;;;;;;;;;;;;;
+
+; Load personal accounts (setq jabber-account-list '(...) )
+(if (file-readable-p "~/.jabber_accounts")
+  (progn
+    (load-file "~/.jabber_accounts")
+    (if (eq system-type 'darwin)
+        (require 'hexrgb))
+
+    (add-to-list 'load-path
+                 (concat my-dotemacs-path "/.emacs.d/emacs-jabber-0.8.90"))
+    (require 'jabber-autoloads)
+
+    (custom-set-variables
+     ;; custom-set-variables was added by Custom.
+     ;; If you edit it by hand, you could mess it up, so be careful.
+     ;; Your init file should contain only one such instance.
+     ;; If there is more than one, they won't work right.
+     '(jabber-auto-reconnect t)
+     '(jabber-avatar-verbose nil)
+     '(jabber-vcard-avatars-retrieve nil)
+     '(jabber-chat-buffer-format "*-Jabber-%n-*")
+     '(jabber-history-enabled t)
+     '(jabber-mode-line-mode t)
+     '(jabber-roster-buffer "*-Jabber-*")
+     '(jabber-roster-line-format " %c %-25n %u %-8s (%r)")
+     '(jabber-show-offline-contacts nil)
+     '(jabber-show-resources nil)
+     '(jabber-roster-show-bindings nil)
+     '(jabber-roster-show-title nil))
+    (jabber-connect-all)
+    )
+  )
+
+;;;;;;;;;;;;;;;;;;;;
+;;; Mac Settings ;;;
+;;;;;;;;;;;;;;;;;;;;
 
 (if (eq system-type 'darwin)
   (progn
