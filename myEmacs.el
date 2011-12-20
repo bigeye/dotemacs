@@ -612,20 +612,13 @@ and puts spaces between the elements."
 ;; (autoload 'garak "garak" nil t)
 ;; (setq tree-widget-image-enable t)
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Jabber
-;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;     Jabber     ;;;
+;;;;;;;;;;;;;;;;;;;;;;
 
 (add-to-list 'load-path
              (concat my-dotemacs-path "/.emacs.d/emacs-jabber-0.8.90"))
 (require 'jabber-autoloads)
-(setq jabber-account-list '(
-                            ("bigeyeguy@gmail.com"
-                             (:password . "")
-                             (:network-server . "talk.google.com")
-                             (:port . 443)
-                             (:connection-type . ssl))
-                            )
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -643,6 +636,15 @@ and puts spaces between the elements."
  '(jabber-show-resources nil)
  '(jabber-roster-show-bindings nil)
  '(jabber-roster-show-title nil))
+
+; Load personal accounts (setq jabber-account-list '(...) )
+(load-file "~/.jabber_accounts")
+(jabber-connect-all)
+
+
+;;;;;;;;;;;;;;;;;;;;
+;;; Mac Settings ;;;
+;;;;;;;;;;;;;;;;;;;;
 
 (if (eq system-type 'darwin)
   (progn
