@@ -603,7 +603,6 @@ and puts spaces between the elements."
              (setq indent-tabs-mode nil)
              (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
-
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; ELIM (IM Client) ;;
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -612,20 +611,95 @@ and puts spaces between the elements."
 ;; (autoload 'garak "garak" nil t)
 ;; (setq tree-widget-image-enable t)
 
+
+;;;;;;;
+;;; hexrgb (only for mac)
+;;;;;
+
+(require 'hexrgb)
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Jabber
-;;;
+;;;;;;;;;;
 
 (add-to-list 'load-path
              (concat my-dotemacs-path "/.emacs.d/emacs-jabber-0.8.90"))
 (require 'jabber-autoloads)
+
 (setq jabber-account-list '(
                             ("bigeyeguy@gmail.com"
-                             (:password . "")
+                             (:password . "dj4067cg*")
                              (:network-server . "talk.google.com")
                              (:port . 443)
                              (:connection-type . ssl))
-                            )
+                            ("bigeye@adby.me"
+                             (:password . "dong0811")
+                             (:network-server . "talk.google.com")
+                             (:port . 443)
+                             (:connection-type . ssl))
+                            ))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
