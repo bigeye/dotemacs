@@ -645,6 +645,7 @@ and puts spaces between the elements."
      '(jabber-roster-show-bindings nil)
      '(jabber-roster-show-title nil))
     (jabber-connect-all)
+    (global-set-key (kbd "C-x C-g") 'jabber-display-roster)
     )
   )
 
