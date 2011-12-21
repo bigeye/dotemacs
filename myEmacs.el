@@ -616,9 +616,17 @@ and puts spaces between the elements."
 ;;;     Jabber     ;;;
 ;;;;;;;;;;;;;;;;;;;;;;
 
-; Load personal accounts (setq jabber-account-list '(...) )
 (if (file-readable-p "~/.jabber_accounts")
   (progn
+    ; Load personal accounts (setq jabber-account-list '(...) )
+    ; (setq jabber-account-list '(
+    ;                             ("username@gmail.com"
+    ;                              (:password . "userpassword")
+    ;                              (:network-server . "talk.google.com")
+    ;                              (:port . 443)
+    ;                              (:connection-type . ssl))
+    ;                            )
+    ; )
     (load-file "~/.jabber_accounts")
     (if (eq system-type 'darwin)
         (require 'hexrgb))
