@@ -690,6 +690,8 @@ and puts spaces between the elements."
   )
 
 (if (file-readable-p "~/.gnus.el")
+  (progn
     (setq browse-url-browser-function "/usr/bin/chromium")
     (gnus)
+    )
   )
