@@ -688,3 +688,8 @@ and puts spaces between the elements."
     (setq mac-command-modifier 'meta)
     (setq mac-option-modifier nil))
   )
+
+(if (file-readable-p "~/.gnus.el")
+    (setq browse-url-browser-function "/usr/bin/chromium")
+    (gnus)
+  )
