@@ -673,7 +673,8 @@ and puts spaces between the elements."
      '(jabber-roster-show-bindings nil)
      '(jabber-alert-presence-message-function (lambda (who oldstatus newstatus statustext) nil))
      '(jabber-roster-show-title nil))
-    (jabber-connect-all)
+    (if (/= 0 (length jabber-account-list))
+        (jabber-connect-all))
     (global-set-key (kbd "C-x g") 'jabber-display-roster)
     )
   )
@@ -693,24 +694,25 @@ and puts spaces between the elements."
 (if (file-readable-p "~/.gnus.el")
   (progn
     (setq browse-url-browser-function "/usr/bin/chromium")
-    (gnus)
+    ;; (gnus)
     )
   )
 
-(if (daemonp)
-  (progn
-    (add-to-list 'default-frame-alist '(font . "Bitstream Vera Sans Mono"))
-    (add-hook 'after-make-frame-functions
-              (lambda (frame)
-                (with-selected-frame frame
-                  (set-fontset-font "fontset-default" '(#x1100 . #xffdc)
-                                    '("UnBom" . "iso10646-1"))
-                  (set-fontset-font "fontset-default" '(#xe0bc . #xf66e)
-                                    '("UnBom" . "iso10646-1"))
-                  )))
-    )
-  (set-face-font 'default "Bitstream Vera Sans Mono")
-  (set-fontset-font "fontset-default" '(#x1100 . #xffdc)
-                    '("UnBom" . "iso10646-1"))
-  (set-fontset-font "fontset-default" '(#xe0bc . #xf66e)
-                    '("UnBom" . "iso10646-1")))
+(if (eq system-type 'gnu/linux)
+    (if (daemonp)
+        (progn
+          (add-to-list 'default-frame-alist '(font . "Bitstream Vera Sans Mono"))
+          (add-hook 'after-make-frame-functions
+                    (lambda (frame)
+                      (with-selected-frame frame
+                        (set-fontset-font "fontset-default" '(#x1100 . #xffdc)
+                                          '("UnBom" . "iso10646-1"))
+                        (set-fontset-font "fontset-default" '(#xe0bc . #xf66e)
+                                          '("UnBom" . "iso10646-1"))
+                        )))
+          )
+      (set-face-font 'default "Bitstream Vera Sans Mono")
+      (set-fontset-font "fontset-default" '(#x1100 . #xffdc)
+                        '("UnBom" . "iso10646-1"))
+      (set-fontset-font "fontset-default" '(#xe0bc . #xf66e)
+                        '("UnBom" . "iso10646-1"))))
