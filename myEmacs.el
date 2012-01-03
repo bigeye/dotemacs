@@ -99,7 +99,7 @@ macros (cf. 'insert-kbd-macro')."
       (if (and (not (string= (file-truename directory) updir))
 	       (< (length updir) (length (file-truename directory))))
 	  (file-search-upward updir file)
-	nil))))
+		nil))))
 
 (defun join-string-list (string-list)
     "Concatenates a list of strings
@@ -427,7 +427,7 @@ and puts spaces between the elements."
 ;; Highlight the current line
 ;; (when (not console-p)
 (global-hl-line-mode 1)
-(set-face-background 'highlight "#fff")
+(set-face-background 'highlight "DarkOliveGreen1")
 ;; )
 
 ;; Turn on whitespace-mode
@@ -435,7 +435,15 @@ and puts spaces between the elements."
 (setq whitespace-style
       (quote
        (face tabs spaces trailing lines space-before-tab newline indentation
-             empty space-after-tab space-mark tab-mark)))
+             space-after-tab space-mark tab-mark)))
+(set-face-attribute 'whitespace-line nil
+                    :background "peach puff"
+                    :foreground "nil"
+                    :weight 'bold)
+(set-face-attribute 'whitespace-space-after-tab nil
+                    :background "lemon chiffon")
+(set-face-attribute 'whitespace-indentation nil
+                    :background "lemon chiffon")
 
 ; If non-nil, `kill-line' with no arg at beg of line kills the whole line.
 ;(setq kill-whole-line nil)
