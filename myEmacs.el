@@ -732,3 +732,6 @@ and puts spaces between the elements."
                         '("UnBom" . "iso10646-1"))
       (set-fontset-font "fontset-default" '(#xe0bc . #xf66e)
                         '("UnBom" . "iso10646-1"))))
+
+;; multi-term
+(require 'multi-term)
