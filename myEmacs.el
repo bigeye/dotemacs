@@ -28,6 +28,7 @@ macros (cf. 'insert-kbd-macro')."
  '(default-input-method "korean-hangul")
  '(ecb-options-version "2.40"))
 (global-set-key (kbd "<Hangul>") 'toggle-input-method)
+(global-defkey "<M-SPC>" 'toggle-input-method)
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Eshell Settings ;;;
