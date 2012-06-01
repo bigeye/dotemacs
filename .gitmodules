@@ -1,0 +1,15 @@
+[submodule ".emacs.d/android-mode"]
+	path = .emacs.d/android-mode
+	url = https://github.com/remvee/android-mode
+[submodule ".emacs.d/restclient"]
+	path = .emacs.d/restclient
+	url = https://github.com/pashky/restclient.el.git
+[submodule ".emacs.d/less-css-mode"]
+	path = .emacs.d/less-css-mode
+	url = https://github.com/purcell/less-css-mode.git
+[submodule ".emacs.d/coffee-mode"]
+	path = .emacs.d/coffee-mode
+	url = https://github.com/defunkt/coffee-mode.git
+[submodule ".emacs.d/slim-mode"]
+	path = .emacs.d/slim-mode
+	url = https://github.com/minad/emacs-slim.git

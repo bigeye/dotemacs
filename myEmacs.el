@@ -437,7 +437,7 @@ and puts spaces between the elements."
       (quote
        (face tabs spaces trailing lines space-before-tab newline indentation
              space-after-tab space-mark tab-mark)))
-(setq whitespace-global-modes '(c-mode c++-mode python-mode php-mode))
+(setq whitespace-global-modes '(c-mode c++-mode python-mode php-mode java-mode))
 
 (set-face-attribute 'whitespace-line nil
                     :background "peach puff"
@@ -671,6 +671,7 @@ and puts spaces between the elements."
      ;; If you edit it by hand, you could mess it up, so be careful.
      ;; Your init file should contain only one such instance.
      ;; If there is more than one, they won't work right.
+     '(jabber-message-alert-same-buffer nil)
      '(jabber-auto-reconnect t)
      '(jabber-avatar-verbose nil)
      '(jabber-vcard-avatars-retrieve nil)
@@ -679,6 +680,7 @@ and puts spaces between the elements."
      '(jabber-mode-line-mode t)
      '(jabber-roster-buffer "*-Jabber-*")
      '(jabber-roster-line-format " %14s | %-23n(%j) %S")
+     '(jabber-libnotify-method 'shell)
      '(jabber-show-offline-contacts nil)
      '(jabber-show-resources nil)
      '(jabber-roster-show-bindings nil)
@@ -688,7 +690,38 @@ and puts spaces between the elements."
         (jabber-connect-all))
     (global-set-key (kbd "C-x g") 'jabber-display-roster)
     )
+
+  (defvar my-libnotify-program "/usr/bin/notify-send")
+  (defun my-notify-send (title message)
+    (start-process "notify" " notify"
+                   my-libnotify-program "--expire-time=2500" title message))
+  (defun my-jabber-libnotify-message (from buf text proposed-alert)
+    "(jabber.el hook) Notify of new Jabber chat messages via libnotify"
+    (when (or jabber-message-alert-same-buffer
+              (not (memq (selected-window) (get-buffer-window-list buf))))
+      (if (jabber-muc-sender-p from)
+          (my-notify-send (format "(PM) %s"
+                               (jabber-jid-displayname (jabber-jid-user from)))
+                       (format "%s: %s" (jabber-jid-resource from) text)))
+      (my-notify-send (format "%s" (jabber-jid-displayname from))
+                   text)))
+  (add-hook 'jabber-alert-message-hooks 'my-jabber-libnotify-message)
   )
+
+;; (defvar libnotify-program "/usr/bin/notify-send")
+;; (defun notify-send (title message)
+;;   (start-process "notify" " notify"
+;; 		 libnotify-program "--expire-time=4000" title message))
+;; (defun libnotify-jabber-notify (from buf text proposed-alert)
+;;   "(jabber.el hook) Notify of new Jabber chat messages via libnotify"
+;;   (when (or jabber-message-alert-same-buffer
+;;             (not (memq (selected-window) (get-buffer-window-list buf))))
+;;     (if (jabber-muc-sender-p from)
+;;         (notify-send (format "(PM) %s"
+;;                        (jabber-jid-displayname (jabber-jid-user from)))
+;;                (format "%s: %s" (jabber-jid-resource from) text)))
+;;       (notify-send (format "%s" (jabber-jid-displayname from))
+;;              text)))
 
 ;;;;;;;;;;;;;;;;;;;;
 ;;; Mac Settings ;;;
@@ -702,9 +735,11 @@ and puts spaces between the elements."
     (setq mac-option-modifier nil))
   )
 
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "chromium-browser")
+
 (if (file-readable-p "~/.gnus.el")
   (progn
-    (setq browse-url-browser-function "/usr/bin/chromium")
     ;; (gnus)
     )
   )
@@ -738,3 +773,20 @@ and puts spaces between the elements."
 
 ;; multi-term
 (require 'multi-term)
+
+(load "orgmode")
+
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/android-mode"))
+(require 'android-mode)
+
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/restclient"))
+(require 'restclient)
+
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/less-css-mode"))
+(require 'less-css-mode)
+
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/slim-mode"))
+(require 'slim-mode)
+
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/coffee-mode"))
+(require 'coffee-mode)
