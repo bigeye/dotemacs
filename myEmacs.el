@@ -399,15 +399,12 @@ and puts spaces between the elements."
 ;; To customize the background color
 ;;(set-face-background 'highlight-current-line-face "blue")
 
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ;;; ECB Settings(disabled) ;;;
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; ECB Settings           ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; "(add-to-list 'load-path './.emacs.d/ecb-2.40')
-;; (load-file './.emacs.d/ecb-2.40/ecb.el')
-;; (require 'ecb)
-;; (ecb-activate)"
-
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/ecb"))
+(require 'ecb)
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;; Other Settings ;;;

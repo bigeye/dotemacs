@@ -13,3 +13,6 @@
 [submodule ".emacs.d/slim-mode"]
 	path = .emacs.d/slim-mode
 	url = https://github.com/minad/emacs-slim.git
+[submodule ".emacs.d/ecb"]
+	path = .emacs.d/ecb
+	url = https://github.com/emacsmirror/ecb.git
