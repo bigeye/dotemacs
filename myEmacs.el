@@ -787,3 +787,8 @@ and puts spaces between the elements."
 
 (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/coffee-mode"))
 (require 'coffee-mode)
+
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/markdown-mode"))
+(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
+(setq markdown-command "Markdown.pl")

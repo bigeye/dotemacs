@@ -16,3 +16,6 @@
 [submodule ".emacs.d/ecb"]
 	path = .emacs.d/ecb
 	url = https://github.com/emacsmirror/ecb.git
+[submodule ".emacs.d/markdown-mode"]
+	path = .emacs.d/markdown-mode
+	url = https://github.com/defunkt/markdown-mode.git
