@@ -775,7 +775,12 @@ and puts spaces between the elements."
 
 (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/android-mode"))
 (require 'android-mode)
-
+(if (eq system-type 'gnu/linux)
+    (progn
+      (setq android-mode-sdk-dir "/usr/local/android-sdk-linux")
+      (add-to-list 'load-path (concat android-mode-sdk-dir "/tools/lib"))
+      (require 'android)))
+      
 (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/restclient"))
 (require 'restclient)
 
@@ -788,7 +793,31 @@ and puts spaces between the elements."
 (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/coffee-mode"))
 (require 'coffee-mode)
 
+(defun coffee-custom ()
+  "coffee-mode-hook"
+  ;; CoffeeScript uses two spaces.
+  (make-local-variable 'tab-width)
+  (set 'tab-width 2))
+
+(add-hook 'coffee-mode-hook 'coffee-custom)
+
 (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/markdown-mode"))
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
 (setq markdown-command "Markdown.pl")
+
+(semantic-mode 1)
+(load "semantic/edit")
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/jde/dist/jdee-2.4.1/lisp"))
+(require 'jde-autoload)
+
+;; (setenv "JAVA_HOME" "/usr/lib/jvm/icedtea-7")
+;; (setenv "CLASSPATH" ".")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(jde-global-classpath (quote ("/usr/local/android-sdk-linux/platforms/android-8/android.jar")))
+ '(jde-jdk-registry (quote (("IcedTea JDK 6.1.11.1" . "/usr/lib/jvm/icedtea-bin-6"))))
+ '(jde-sourcepath (quote ("/usr/local/android-sdk-linux/sources/android-14")))

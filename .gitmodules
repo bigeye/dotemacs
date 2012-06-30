@@ -19,3 +19,6 @@
 [submodule ".emacs.d/markdown-mode"]
 	path = .emacs.d/markdown-mode
 	url = https://github.com/defunkt/markdown-mode.git
+[submodule ".emacs.d/jde"]
+	path = .emacs.d/jde
+	url = https://github.com/emacsmirror/jdee.git
