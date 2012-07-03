@@ -22,3 +22,6 @@
 [submodule ".emacs.d/jde"]
 	path = .emacs.d/jde
 	url = https://github.com/emacsmirror/jdee.git
+[submodule ".emacs.d/cedet"]
+	path = .emacs.d/cedet
+	url = http://git.randomsample.de/cedet.git

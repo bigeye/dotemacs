@@ -15,6 +15,46 @@ nKEY should be a string in the format used for saving keyboard
 macros (cf. 'insert-kbd-macro')."
 `(global-set-key (read-kbd-macro,key),def))
 
+;; Load CEDET.
+;; See cedet/common/cedet.info for configuration details.
+;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
+;; CEDET component (including EIEIO) gets activated by another 
+;; package (Gnus, auth-source, ...).
+(load-file (concat my-dotemacs-path "/.emacs.d/cedet/common/cedet.el"))
+
+;; Enable EDE (Project Management) features
+(global-ede-mode 1)
+
+;; Enable EDE for a pre-existing C++ project
+;; (ede-cpp-root-project "NAME" :file "~/myproject/Makefile")
+
+
+;; Enabling Semantic (code-parsing, smart completion) features
+;; Select one of the following:
+
+;; * This enables the database and idle reparse engines
+(semantic-load-enable-minimum-features)
+
+;; * This enables some tools useful for coding, such as summary mode,
+;;   imenu support, and the semantic navigator
+(semantic-load-enable-code-helpers)
+
+;; * This enables even more coding tools such as intellisense mode,
+;;   decoration mode, and stickyfunc mode (plus regular code helpers)
+;; (semantic-load-enable-gaudy-code-helpers)
+
+;; * This enables the use of Exuberant ctags if you have it installed.
+;;   If you use C++ templates or boost, you should NOT enable it.
+;; (semantic-load-enable-all-exuberent-ctags-support)
+;;   Or, use one of these two types of support.
+;;   Add support for new languages only via ctags.
+;; (semantic-load-enable-primary-exuberent-ctags-support)
+;;   Add support for using ctags as a backup parser.
+;; (semantic-load-enable-secondary-exuberent-ctags-support)
+
+;; Enable SRecode (Template management) minor-mode.
+;; (global-srecode-minor-mode 1)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Input Method Settings ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -296,81 +336,6 @@ and puts spaces between the elements."
                                 (call-interactively 'gud-cont)))
 (global-set-key (kbd "C-x C-a C-c") 'gud-cont)
 (global-set-key (kbd "C-x C-a C-w") 'gud-watch)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; CEDET Settings(disabled) ;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Load CEDET.
-;; See cedet/common/cedet.info for configuration details.
-;;(load-file "~/.emacs.d/cedet/common/cedet.el")
-
-
-;; Enable EDE (Project Management) features
-;;(global-ede-mode 1) ;Turn on variable `ede-minor-mode' mode when arg
-		    ;is positive.  If arg is negative, disable.
-		    ;Toggle otherwise.
-
-;; Enable EDE for a pre-existing C++ project
-;; (ede-cpp-root-project "NAME" :file "~/myproject/Makefile")
-
-
-;; Enabling Semantic (code-parsing, smart completion) features
-;; Select one of the following:
-
-;; * This enables the database and idle reparse engines
-;;(semantic-load-enable-minimum-features)
-
-;; * This enables some tools useful for coding, such as summary mode
-;;   imenu support, and the semantic navigator
-;;(semantic-load-enable-code-helpers)
-
-;; * This enables even more coding tools such as intellisense mode
-;;   decoration mode, and stickyfunc mode (plus regular code helpers)
-;; (semantic-load-enable-gaudy-code-helpers)
-
-;; * This enables the use of Exuberent ctags if you have it installed.
-;;   If you use C++ templates or boost, you should NOT enable it.
-;; (semantic-load-enable-all-exuberent-ctags-support)
-;;   Or, use one of these two types of support.
-;;   Add support for new languges only via ctags.
-;; (semantic-load-enable-primary-exuberent-ctags-support)
-;;   Add support for using ctags as a backup parser.
-;; (semantic-load-enable-secondary-exuberent-ctags-support)
-
-;; Enable SRecode (Template management) minor-mode.
-;; (global-srecode-minor-mode 1)
-
-;;(require 'semantic-ia) 
-;;(global-semanticdb-minor-mode 1)
-
-;;(setq semanticdb-default-save-directory "~/.emacs.d/#semanticdb.cache#")
-
-;;(semantic-add-system-include "/usr/include/" 'c-mode)
-;;(semantic-add-system-include
-;; "/usr/lib/gcc/x86_64-linux-gnu/4.4.3/include"
-;; 'c-mode)
-;;(semantic-add-system-include "/usr/include/" 'c++-mode)
-;;(semantic-add-system-include
-;; "/usr/lib/gcc/x86_64-linux-gnu/4.4.3/include"
-;; 'c++-mode)
-;(semantic-add-system-include
-; "/usr/lib/gcc/i686-pc-linux-gnu/4.1.2/include/g++-v4/"
-; 'c++-mode)
-
-;;(global-set-key (kbd "<C-return>") 'semantic-ia-complete-symbol-menu)
-;;(global-set-key (kbd "<C-S-return>") 'semantic-ia-complete-tip)
-;;(global-set-key (kbd "C-c <C-return>") 'semantic-complete-analyze-inline)
-;;(global-set-key (kbd "C-x <C-return>") 'semantic-analyze-possible-completions)
-;;(global-set-key (kbd "RET") 'newline-and-indent)
-
-
-"(global-set-key [(meta return)] 'senator-complete-symbol)
-
-(global-set-key [(meta shift return)] 'complete-symbol)
-
-(global-set-key [(control meta return)] 'ebrowse-tags-complete-symbol)"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; YAsnippet settings ;;;
@@ -806,18 +771,26 @@ and puts spaces between the elements."
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
 (setq markdown-command "Markdown.pl")
 
-(semantic-mode 1)
-(load "semantic/edit")
-(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/jde/dist/jdee-2.4.1/lisp"))
-(require 'jde-autoload)
+(add-to-list 'load-path (expand-file-name (concat my-dotemacs-path "/.emacs.d/jde/dist/jdee-2.4.1/lisp")))
+(add-to-list 'load-path (expand-file-name (concat my-dotemacs-path "/.emacs.d/elib")))
 
-;; (setenv "JAVA_HOME" "/usr/lib/jvm/icedtea-7")
-;; (setenv "CLASSPATH" ".")
+(require 'jde)
+
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(jde-global-classpath (quote ("/usr/local/android-sdk-linux/platforms/android-8/android.jar")))
- '(jde-jdk-registry (quote (("IcedTea JDK 6.1.11.1" . "/usr/lib/jvm/icedtea-bin-6"))))
- '(jde-sourcepath (quote ("/usr/local/android-sdk-linux/sources/android-14")))
+ '(jde-jdk (quote ("icedtea7")))
+ '(jde-jdk-registry (quote (("sun-jdk-1.6.0.26" . "/opt/sun-jdk-1.6.0.26")
+                            ("icedtea7" . "/usr/lib64/icedtea7")))))
+;; (load "semantic/edit")
+;; (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/jde/dist/jdee-2.4.1/lisp"))
+;; (require 'jde-autoload)
+
+;; ;; (setenv "JAVA_HOME" "/usr/lib/jvm/icedtea-7")
+;; ;; (setenv "CLASSPATH" ".")
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(jde-global-classpath (quote ("/usr/local/android-sdk-linux/platforms/android-8/android.jar")))
+;;  '(jde-jdk-registry (quote (("IcedTea JDK 6.1.11.1" . "/usr/lib/jvm/icedtea-bin-6"))))
+;;  '(jde-sourcepath (quote ("/usr/local/android-sdk-linux/sources/android-14")))
