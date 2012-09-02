@@ -795,6 +795,8 @@ and puts spaces between the elements."
 ;;  '(jde-jdk-registry (quote (("IcedTea JDK 6.1.11.1" . "/usr/lib/jvm/icedtea-bin-6"))))
 ;;  '(jde-sourcepath (quote ("/usr/local/android-sdk-linux/sources/android-14")))
 
+(add-to-list 'same-window-buffer-names "*Help*")
+
 ;;
 ;; ace jump mode major function
 ;; 
