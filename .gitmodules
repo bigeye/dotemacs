@@ -28,3 +28,6 @@
 [submodule ".emacs.d/ace-jump-mode"]
 	path = .emacs.d/ace-jump-mode
 	url = git://github.com/winterTTr/ace-jump-mode.git
+[submodule ".emacs.d/expand-region"]
+	path = .emacs.d/expand-region
+	url = git://github.com/magnars/expand-region.el.git
