@@ -31,3 +31,9 @@
 [submodule ".emacs.d/expand-region"]
 	path = .emacs.d/expand-region
 	url = git://github.com/magnars/expand-region.el.git
+[submodule ".emacs.d/key-chord"]
+	path = .emacs.d/key-chord
+	url = git://github.com/emacsmirror/key-chord.git
+[submodule ".emacs.d/iy-go-to-char"]
+	path = .emacs.d/iy-go-to-char
+	url = git://github.com/emacsmirror/iy-go-to-char.git

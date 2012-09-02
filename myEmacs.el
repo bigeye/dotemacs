@@ -822,3 +822,27 @@ and puts spaces between the elements."
 (eval-after-load "ace-jump-mode"
   '(ace-jump-mode-enable-mark-sync))
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
+
+;;
+;; Expand region
+;;
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/expand-region"))
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+;;
+;; Iy-go-to-char
+;;
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/iy-go-to-char"))
+(require 'iy-go-to-char)
+(global-set-key (kbd "M-m") 'iy-go-to-char)
+
+;;
+;; Key Chord
+;;
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/key-chord"))
+(require 'key-chord)
+(key-chord-mode 1)
+
+(key-chord-define-global "fg" 'iy-go-to-char)
+(key-chord-define-global "df" 'iy-go-to-char-backward)
