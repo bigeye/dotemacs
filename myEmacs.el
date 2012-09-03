@@ -738,7 +738,7 @@ and puts spaces between the elements."
 ;; multi-term
 (require 'multi-term)
 
-(load "orgmode")
+;; (load "orgmode")
 
 (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/android-mode"))
 (require 'android-mode)
@@ -863,3 +863,23 @@ and puts spaces between the elements."
           (lambda ()
             (require 'rename-sgml-tag)
             (define-key sgml-mode-map (kbd "C-c C-r") 'rename-sgml-tag)))
+
+
+;;
+;; Org-mode
+;;
+
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/org-mode/lisp"))
+(require 'org-install)
+(setq org-default-notes-file "~/org/notes.org")
+
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.org.gpg$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.ref$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.ref.gpg$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.notes$" . org-mode))
+
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
