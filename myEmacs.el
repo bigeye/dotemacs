@@ -629,7 +629,7 @@ and puts spaces between the elements."
     (add-to-list 'load-path
                  (concat my-dotemacs-path "/.emacs.d/emacs-jabber-0.8.90"))
     (require 'jabber-autoloads)
-
+    (add-to-list 'same-window-buffer-names "*-Jabber-*")
     (custom-set-variables
      ;; custom-set-variables was added by Custom.
      ;; If you edit it by hand, you could mess it up, so be careful.
