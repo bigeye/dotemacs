@@ -883,3 +883,19 @@ and puts spaces between the elements."
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+(setq org-agenda-files '("~/org"))
+(setq org-log-into-drawer t)
+(setq org-todo-keywords
+           '((sequence "TODO(t!)" "|" "DONE(d!)")
+             (sequence "REPORT(r!)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f@/!)")
+             (sequence "|" "CANCELED(c!)")))
+(setq org-mobile-directory "~/org/mobileorg")
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/notes.org" "Tasks")
+         "* TODO %?\n%T")
+        ("m" "Movie" entry (file+headline "~/org/movie.org" "Movies")
+         "* TODO %?\n%T\n:PROPERTIES:\n:DIRECTOR:\n:STARS:\n:RELEASE DATE:\n:RECOMMENDED BY:\n:END:" )))
+
+(setq org-refile-targets '((org-agenda-files :maxlevel . 1)
+                           (nil :maxlevel . 1)))
