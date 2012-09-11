@@ -43,3 +43,9 @@
 [submodule ".emacs.d/org-mode"]
 	path = .emacs.d/org-mode
 	url = git://orgmode.org/org-mode.git
+[submodule ".emacs.d/dictionary"]
+	path = .emacs.d/dictionary
+	url = https://github.com/emacsmirror/dictionary.git
+[submodule ".emacs.d/anything-config"]
+	path = .emacs.d/anything-config
+	url = git://repo.or.cz/anything-config.git

@@ -606,6 +606,23 @@ and puts spaces between the elements."
 ;; (autoload 'garak "garak" nil t)
 ;; (setq tree-widget-image-enable t)
 
+;;
+;; Anything config
+;;
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/anything-config"))
+(require 'anything-config)
+
+(global-set-key (kbd "C-x b")
+  (lambda() (interactive)
+    (anything
+     :prompt "Switch to: "
+     :candidate-number-limit 10                 ;; up to 10 of each
+     :sources
+     '( anything-c-source-buffers               ;; buffers
+        anything-c-source-recentf               ;; recent files
+        anything-c-source-bookmarks             ;; bookmarks
+        anything-c-source-files-in-current-dir+ ;; current dir
+        anything-c-source-locate))))            ;; use 'locate'
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;;     Jabber     ;;;
@@ -864,7 +881,6 @@ and puts spaces between the elements."
             (require 'rename-sgml-tag)
             (define-key sgml-mode-map (kbd "C-c C-r") 'rename-sgml-tag)))
 
-
 ;;
 ;; Org-mode
 ;;
@@ -897,5 +913,5 @@ and puts spaces between the elements."
         ("m" "Movie" entry (file+headline "~/org/movie.org" "Movies")
          "* TODO %?\n%T\n:PROPERTIES:\n:DIRECTOR:\n:STARS:\n:RELEASE DATE:\n:RECOMMENDED BY:\n:END:" )))
 
-(setq org-refile-targets '((org-agenda-files :maxlevel . 1)
-                           (nil :maxlevel . 1)))
+(setq org-refile-targets '((nil :maxlevel . 2)
+                           (org-agenda-files :maxlevel . 1)))
