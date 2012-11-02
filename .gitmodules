@@ -49,3 +49,9 @@
 [submodule ".emacs.d/anything-config"]
 	path = .emacs.d/anything-config
 	url = git://repo.or.cz/anything-config.git
+[submodule ".emacs.d/switch-window"]
+	path = .emacs.d/switch-window
+	url = git://github.com/dimitri/switch-window.git
+[submodule ".emacs.d/window-number"]
+	path = .emacs.d/window-number
+	url = git://github.com/emacsmirror/window-number.git

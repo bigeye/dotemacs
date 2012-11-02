@@ -279,8 +279,8 @@ and puts spaces between the elements."
 ;;; Icicles Settings ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'icicles)
-(icy-mode 1)
+;(require 'icicles)
+;(icy-mode 1)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -434,7 +434,6 @@ and puts spaces between the elements."
 ;(global-defkey "<C-tab>" 'other-window)
 (global-defkey "<backtab>" 'previous-window)
 (global-defkey "<RET>" 'newline-and-indent)
-(global-defkey "C-x C-b" 'buffer-menu)
 
 (setq-default indent-tabs-mode nil)
 
@@ -609,20 +608,20 @@ and puts spaces between the elements."
 ;;
 ;; Anything config
 ;;
-(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/anything-config"))
-(require 'anything-config)
+;; (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/anything-config"))
+;; (require 'anything-config)
 
-(global-set-key (kbd "C-x b")
-  (lambda() (interactive)
-    (anything
-     :prompt "Switch to: "
-     :candidate-number-limit 10                 ;; up to 10 of each
-     :sources
-     '( anything-c-source-buffers               ;; buffers
-        anything-c-source-recentf               ;; recent files
-        anything-c-source-bookmarks             ;; bookmarks
-        anything-c-source-files-in-current-dir+ ;; current dir
-        anything-c-source-locate))))            ;; use 'locate'
+;; (global-set-key (kbd "C-x b")
+;;   (lambda() (interactive)
+;;     (anything
+;;      :prompt "Switch to: "
+;;      :candidate-number-limit 10                 ;; up to 10 of each
+;;      :sources
+;;      '( anything-c-source-buffers               ;; buffers
+;;         anything-c-source-recentf               ;; recent files
+;;         anything-c-source-bookmarks             ;; bookmarks
+;;         anything-c-source-files-in-current-dir+ ;; current dir
+;;         anything-c-source-locate))))            ;; use 'locate'
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;;     Jabber     ;;;
@@ -755,8 +754,6 @@ and puts spaces between the elements."
 ;; multi-term
 (require 'multi-term)
 
-;; (load "orgmode")
-
 (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/android-mode"))
 (require 'android-mode)
 (if (eq system-type 'gnu/linux)
@@ -827,6 +824,7 @@ and puts spaces between the elements."
   t)
 ;; you can select the key you prefer to
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-c C-c SPC") 'ace-jump-line-mode)
 
 
 
@@ -882,36 +880,25 @@ and puts spaces between the elements."
             (define-key sgml-mode-map (kbd "C-c C-r") 'rename-sgml-tag)))
 
 ;;
-;; Org-mode
+;; Switch-window
 ;;
 
-(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/org-mode/lisp"))
-(require 'org-install)
-(setq org-default-notes-file "~/org/notes.org")
+;; (add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/switch-window"))
+;; (require 'switch-window)
+;; (setq switch-window-increase 4)
+;; (setq switch-window-timeout 5)
+;; (setq switch-window-shortcut-style 'qwerty)
 
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(add-to-list 'auto-mode-alist '("\\.org.gpg$" . org-mode))
-(add-to-list 'auto-mode-alist '("\\.ref$" . org-mode))
-(add-to-list 'auto-mode-alist '("\\.ref.gpg$" . org-mode))
-(add-to-list 'auto-mode-alist '("\\.notes$" . org-mode))
+;;
+;; window-number
+;;
 
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
-
-(setq org-agenda-files '("~/org"))
-(setq org-log-into-drawer t)
-(setq org-todo-keywords
-           '((sequence "TODO(t!)" "|" "DONE(d!)")
-             (sequence "REPORT(r!)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f@/!)")
-             (sequence "|" "CANCELED(c!)")))
-(setq org-mobile-directory "~/org/mobileorg")
-(setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/notes.org" "Tasks")
-         "* TODO %?\n%T")
-        ("m" "Movie" entry (file+headline "~/org/movie.org" "Movies")
-         "* TODO %?\n%T\n:PROPERTIES:\n:DIRECTOR:\n:STARS:\n:RELEASE DATE:\n:RECOMMENDED BY:\n:END:" )))
-
-(setq org-refile-targets '((nil :maxlevel . 2)
-                           (org-agenda-files :maxlevel . 1)))
+(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/window-number"))
+(require 'window-number)
+(setq window-number-mode-map (make-sparse-keymap))
+(window-number-define-keys window-number-mode-map "C-x C-o ")
+(window-number-mode 1)
+(load "bigeye/mode-line")
+(load "bigeye/org-mode")
+(load "bigeye/ibuffer")
+(load "bigeye/ido-mode")
