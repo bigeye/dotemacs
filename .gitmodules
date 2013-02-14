@@ -1,57 +1,78 @@
-[submodule ".emacs.d/android-mode"]
-	path = .emacs.d/android-mode
+[submodule "vendor/android-mode"]
+	path = vendor/android-mode
 	url = https://github.com/remvee/android-mode
-[submodule ".emacs.d/restclient"]
-	path = .emacs.d/restclient
+[submodule "vendor/restclient"]
+	path = vendor/restclient
 	url = https://github.com/pashky/restclient.el.git
-[submodule ".emacs.d/less-css-mode"]
-	path = .emacs.d/less-css-mode
+[submodule "vendor/less-css-mode"]
+	path = vendor/less-css-mode
 	url = https://github.com/purcell/less-css-mode.git
-[submodule ".emacs.d/coffee-mode"]
-	path = .emacs.d/coffee-mode
+[submodule "vendor/coffee-mode"]
+	path = vendor/coffee-mode
 	url = https://github.com/defunkt/coffee-mode.git
-[submodule ".emacs.d/slim-mode"]
-	path = .emacs.d/slim-mode
+[submodule "vendor/slim-mode"]
+	path = vendor/slim-mode
 	url = https://github.com/minad/emacs-slim.git
-[submodule ".emacs.d/ecb"]
-	path = .emacs.d/ecb
+[submodule "vendor/ecb"]
+	path = vendor/ecb
 	url = https://github.com/emacsmirror/ecb.git
-[submodule ".emacs.d/markdown-mode"]
-	path = .emacs.d/markdown-mode
+[submodule "vendor/markdown-mode"]
+	path = vendor/markdown-mode
 	url = https://github.com/defunkt/markdown-mode.git
-[submodule ".emacs.d/jde"]
-	path = .emacs.d/jde
+[submodule "vendor/jde"]
+	path = vendor/jde
 	url = https://github.com/emacsmirror/jdee.git
-[submodule ".emacs.d/cedet"]
-	path = .emacs.d/cedet
-	url = http://git.randomsample.de/cedet.git
-[submodule ".emacs.d/ace-jump-mode"]
-	path = .emacs.d/ace-jump-mode
+[submodule "vendor/cedet"]
+	path = vendor/cedet
+	url = https://github.com/emacsmirror/cedet.git
+[submodule "vendor/ace-jump-mode"]
+	path = vendor/ace-jump-mode
 	url = git://github.com/winterTTr/ace-jump-mode.git
-[submodule ".emacs.d/expand-region"]
-	path = .emacs.d/expand-region
+[submodule "vendor/expand-region"]
+	path = vendor/expand-region
 	url = git://github.com/magnars/expand-region.el.git
-[submodule ".emacs.d/key-chord"]
-	path = .emacs.d/key-chord
+[submodule "vendor/key-chord"]
+	path = vendor/key-chord
 	url = git://github.com/emacsmirror/key-chord.git
-[submodule ".emacs.d/iy-go-to-char"]
-	path = .emacs.d/iy-go-to-char
+[submodule "vendor/iy-go-to-char"]
+	path = vendor/iy-go-to-char
 	url = git://github.com/emacsmirror/iy-go-to-char.git
-[submodule ".emacs.d/mark-multiple"]
-	path = .emacs.d/mark-multiple
+[submodule "vendor/mark-multiple"]
+	path = vendor/mark-multiple
 	url = git://github.com/magnars/mark-multiple.el.git
-[submodule ".emacs.d/org-mode"]
-	path = .emacs.d/org-mode
+[submodule "vendor/org-mode"]
+	path = vendor/org-mode
 	url = git://orgmode.org/org-mode.git
-[submodule ".emacs.d/dictionary"]
-	path = .emacs.d/dictionary
+[submodule "vendor/dictionary"]
+	path = vendor/dictionary
 	url = https://github.com/emacsmirror/dictionary.git
-[submodule ".emacs.d/anything-config"]
-	path = .emacs.d/anything-config
+[submodule "vendor/anything-config"]
+	path = vendor/anything-config
 	url = git://repo.or.cz/anything-config.git
-[submodule ".emacs.d/switch-window"]
-	path = .emacs.d/switch-window
+[submodule "vendor/switch-window"]
+	path = vendor/switch-window
 	url = git://github.com/dimitri/switch-window.git
-[submodule ".emacs.d/window-number"]
-	path = .emacs.d/window-number
+[submodule "vendor/window-number"]
+	path = vendor/window-number
 	url = git://github.com/emacsmirror/window-number.git
+[submodule "vendor/eproject"]
+	path = vendor/eproject
+	url = http://repo.or.cz/r/eproject.git
+[submodule "vendor/emacs-eclim"]
+	path = vendor/emacs-eclim
+	url = git://github.com/senny/emacs-eclim.git
+[submodule "vendor/helm"]
+	path = vendor/helm
+	url = git://github.com/emacs-helm/helm.git
+[submodule "vendor/color-theme"]
+	path = vendor/color-theme
+	url = git@github.com:bigeye/color-theme.git
+[submodule "vendor/yasnippet"]
+	path = vendor/yasnippet
+	url = git://github.com/capitaomorte/yasnippet.git
+[submodule "vendor/auto-complete"]
+	path = vendor/auto-complete
+	url = git://github.com/auto-complete/auto-complete.git
+[submodule "vendor/jabber"]
+	path = vendor/jabber
+	url = git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber

@@ -9,7 +9,7 @@
 ;; Org-mode
 ;;
 
-(add-to-list 'load-path (concat my-dotemacs-path "/.emacs.d/org-mode/lisp"))
+(add-to-list 'load-path "~/.emacs.d/vendor/org-mode/lisp")
 (require 'org-install)
 (setq org-default-notes-file "~/org/notes.org")
 

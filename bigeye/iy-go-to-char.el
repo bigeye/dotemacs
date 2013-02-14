@@ -1,0 +1,1 @@
+(global-set-key "\M-m" 'iy-go-to-char)
