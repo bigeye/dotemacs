@@ -76,3 +76,6 @@
 [submodule "vendor/jabber"]
 	path = vendor/jabber
 	url = git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber
+[submodule "vendor/autosmiley"]
+	path = vendor/autosmiley
+	url = git://github.com/emacsmirror/autosmiley.git

@@ -1,4 +1,5 @@
 *.elc
 ac-comphist.dat
-cache/
 tramp
+auto-save-list/
+cache/

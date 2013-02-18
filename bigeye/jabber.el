@@ -33,6 +33,7 @@
         '(jabber-show-resources nil)
         '(jabber-roster-show-bindings nil)
         '(jabber-alert-presence-message-function (lambda (who oldstatus newstatus statustext) nil))
+        '(jabber-use-global-history nil)
         '(jabber-roster-show-title nil))
        (if (/= 0 (length jabber-account-list))
            (jabber-connect-all))

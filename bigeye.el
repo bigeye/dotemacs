@@ -3,7 +3,6 @@
 (setq custom-file "~/.emacs.d/bigeye/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
 
-(load "bigeye/bindings")
 (load "bigeye/defuns")
 (load "bigeye/eshell")
 (load "bigeye/erc")
@@ -33,3 +32,6 @@
 (vendor 'expand-region)
 (vendor 'iy-go-to-char)
 (vendor 'window-number)
+
+;; key binding should be in last part
+(load "bigeye/bindings")
