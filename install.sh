@@ -3,6 +3,7 @@ ln -s $PWD/emacs.el $HOME/.emacs
 ln -s $PWD/ $HOME/.emacs.d
 git submodule update --init --recursive
 (cd vendor/jabber && autoreconf --install && ./configure && make)
+mkdir cache
 # cd .emacs.d/cedet
 # make
 # cd ..

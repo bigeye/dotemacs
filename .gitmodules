@@ -12,7 +12,7 @@
 	url = https://github.com/defunkt/coffee-mode.git
 [submodule "vendor/slim-mode"]
 	path = vendor/slim-mode
-	url = https://github.com/minad/emacs-slim.git
+	url = https://github.com/slim-template/emacs-slim.git
 [submodule "vendor/ecb"]
 	path = vendor/ecb
 	url = https://github.com/emacsmirror/ecb.git
