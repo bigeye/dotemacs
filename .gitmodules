@@ -79,3 +79,6 @@
 [submodule "vendor/autosmiley"]
 	path = vendor/autosmiley
 	url = git://github.com/emacsmirror/autosmiley.git
+[submodule "vendor/jade-mode"]
+	path = vendor/jade-mode
+	url = git://github.com/brianc/jade-mode.git
