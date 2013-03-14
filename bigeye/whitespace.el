@@ -4,7 +4,7 @@
        (face tabs spaces trailing lines space-before-tab newline indentation
              space-after-tab space-mark tab-mark)))
 (setq whitespace-global-modes '(c-mode c++-mode python-mode php-mode java-mode jde-mode js-mode))
-(add-hook 'jde-mode-hook
+(add-hook 'java-mode-hook
           (lambda ()
             (setq whitespace-line-column 100)))
 (set-face-attribute 'whitespace-line nil

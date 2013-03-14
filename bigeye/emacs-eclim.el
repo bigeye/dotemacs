@@ -10,6 +10,6 @@
 (require 'eclimd)
 
 ;; add the emacs-eclim source
-(require 'ac-emacs-eclim-source)
+;; (require 'ac-emacs-eclim-source)
 
-(ac-emacs-eclim-config)
+;; (ac-emacs-eclim-config)

@@ -7,7 +7,8 @@
  '(default-input-method "korean-hangul")
  '(make-backup-files nil)
  '(x-select-enable-clipboard t)
- '(indent-tabs-mode nil))
+ '(indent-tabs-mode nil)
+ '(c-basic-offset 2))
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
