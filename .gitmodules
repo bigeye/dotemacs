@@ -82,3 +82,9 @@
 [submodule "vendor/jade-mode"]
 	path = vendor/jade-mode
 	url = git://github.com/brianc/jade-mode.git
+[submodule "vendor/xcscope+"]
+	path = vendor/xcscope+
+	url = git://github.com/emacsmirror/xcscope-plus.git
+[submodule "vendor/xcscope"]
+	path = vendor/xcscope
+	url = git://github.com/emacsattic/xcscope.git

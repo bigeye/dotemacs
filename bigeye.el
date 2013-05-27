@@ -8,7 +8,7 @@
 (load "bigeye/erc")
 (load "bigeye/auto-complete")
 (load "bigeye/color")
-(load "bigeye/whitespace")
+;; (load "bigeye/whitespace")
 (load "bigeye/line-number")
 (load "bigeye/jabber")
 (load "bigeye/font")
@@ -20,6 +20,7 @@
 (load "bigeye/ibuffer")
 (load "bigeye/emacs-eclim")
 (load "bigeye/ido-mode")
+(load "bigeye/compile")
 ;; (load "bigeye/helm")
 
 (vendor 'color-theme)
@@ -32,6 +33,8 @@
 (vendor 'expand-region)
 (vendor 'iy-go-to-char)
 (vendor 'window-number)
+(vendor 'xcscope)
+(vendor 'xcscope+)
 
 ;; key binding should be in last part
 (load "bigeye/bindings")
