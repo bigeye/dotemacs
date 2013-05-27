@@ -23,8 +23,9 @@
  '(jabber-use-global-history nil)
  '(jabber-vcard-avatars-retrieve nil)
  '(make-backup-files nil)
- '(safe-local-variable-values (quote ((test-case-name . twisted\.test\.test_twistd))))
- '(x-select-enable-clipboard t))
+ '(x-select-enable-clipboard t)
+ '(indent-tabs-mode nil)
+ '(c-basic-offset 2))
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
