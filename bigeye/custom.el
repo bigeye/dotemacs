@@ -39,7 +39,7 @@
   )
 
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "chromium-browser")
+      browse-url-generic-program "firefox")
 (add-to-list 'same-window-buffer-names "*Help*")
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
