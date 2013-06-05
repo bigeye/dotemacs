@@ -3,3 +3,5 @@ ac-comphist.dat
 tramp
 auto-save-list/
 cache/
+elpa/
+*~

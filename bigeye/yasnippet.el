@@ -1,1 +1,4 @@
-(yas-global-mode 1)
+(require 'yasnippet)
+(stante-after yasnippet
+	      (yas-global-mode 1)
+)

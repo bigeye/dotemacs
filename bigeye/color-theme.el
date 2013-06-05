@@ -1,2 +1,4 @@
-(color-theme-initialize)
-(color-theme-katester)
+(require 'color-theme)
+(stante-after color-theme
+  (color-theme-katester)
+)
