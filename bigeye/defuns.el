@@ -30,3 +30,7 @@ FEATURE may be an unquoted feature symbol or a file name, see
      ((file-exists-p suffix) (require library)))
     (when (file-exists-p (concat bigeye ".el"))
       (load bigeye))))
+
+(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
+  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
+  (flet ((process-list ())) ad-do-it))
