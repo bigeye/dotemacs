@@ -47,3 +47,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; (add-to-list 'compilation-error-regexp-alist
+;;              'maven)
+;; (add-to-list 'compilation-error-regexp-alist-alist
+;;        '(maven "\\[ERROR\\] \\(.+?\\):\\[\\([0-9]+\\),\\([0-9]+\\)\\].*"
+;;            1 2 3))
+;; Don't know why it doesn't work
+(add-hook 'eclim-mode-hook (lambda ()
+                             (add-to-list 'compilation-error-regexp-alist '("\\[ERROR\\] \\(.+?\\):\\[\\([0-9]+\\),\\([0-9]+\\)\\].*"
+                                                                            1 2 3))))
