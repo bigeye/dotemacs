@@ -1,0 +1,1 @@
+(require 'glsl-mode)

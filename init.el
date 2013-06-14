@@ -34,6 +34,7 @@
 (load "bigeye/expand-region")
 (load "bigeye/iy-go-to-char")
 (load "bigeye/window-number")
+(load "bigeye/glsl-mode")
 ;; (vendor 'restclient)
 
 (load "bigeye/color")
