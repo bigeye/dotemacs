@@ -25,6 +25,7 @@
 (load "bigeye/ibuffer")
 (load "bigeye/emacs-eclim")
 (load "bigeye/ido-mode")
+(load "bigeye/flx-ido-mode")
 (load "bigeye/compile")
 ;; (load "bigeye/helm")
 ;; (load "bigeye/color-theme")
@@ -36,6 +37,7 @@
 (load "bigeye/window-number")
 (load "bigeye/glsl-mode")
 ;; (vendor 'restclient)
+(load "bigeye/projectile")
 
 (load "bigeye/color")
 

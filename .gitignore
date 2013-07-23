@@ -8,3 +8,5 @@ elpa/
 local.el
 session.*
 url/*
+projectile-bookmarks.eld
+projectile.cache
