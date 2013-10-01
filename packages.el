@@ -15,7 +15,7 @@
 (defvar prelude-packages
   '(eshell erc auto-complete jabber markdown-mode ace-jump-mode
            ibuffer ido color-theme yasnippet android-mode less-css-mode
-           slim-mode coffee-mode expand-region window-number magit
+           slim-mode coffee-mode expand-region window-number
            whitespace linum org iy-go-to-char monokai-theme glsl-mode
            emacs-eclim projectile flx-ido)
   "A list of packages to ensure are installed at launch.")

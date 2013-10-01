@@ -30,7 +30,6 @@
 ;; (load "bigeye/helm")
 ;; (load "bigeye/color-theme")
 (load "bigeye/yasnippet")
-(load "bigeye/android-mode")
 (load "bigeye/coffee-mode")
 (load "bigeye/expand-region")
 (load "bigeye/iy-go-to-char")
