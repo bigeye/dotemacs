@@ -10,3 +10,4 @@ session.*
 url/*
 projectile-bookmarks.eld
 projectile.cache
+.*
