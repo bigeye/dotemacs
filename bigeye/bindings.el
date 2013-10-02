@@ -7,3 +7,5 @@
 
 (windmove-default-keybindings 'meta)
 (global-set-key [\r] 'newline-and-indent)
+
+(global-set-key (kbd "C-c g") 'magit-status)
