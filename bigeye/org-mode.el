@@ -16,7 +16,7 @@
 
 (defun org-mobile-sync-enable ()
   "enable mobile org idle sync"
-  (interactiv)
+  (interactive)
   (setq org-mobile-sync-timer
         (run-with-idle-timer org-mobile-sync-idle-secs t
                              'org-mobile-sync)))
