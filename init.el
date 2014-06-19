@@ -37,6 +37,7 @@
 (load "bigeye/glsl-mode")
 ;; (vendor 'restclient)
 (load "bigeye/projectile")
+(load "bigeye/window")
 
 (load "bigeye/color")
 
