@@ -1,6 +1,6 @@
 (require 'whitespace)
 (stante-after whitespace
-	      (global-whitespace-mode 1)
+	      (setq global-whitespace-mode nil)
 	      (setq whitespace-style
 		    (quote
 		     (face tabs spaces trailing lines space-before-tab newline indentation
