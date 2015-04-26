@@ -37,11 +37,13 @@
 (load "bigeye/glsl-mode")
 ;; (vendor 'restclient)
 (load "bigeye/projectile")
+(load "bigeye/javacc-mode")
 
 (load "bigeye/color")
 
 (vendor 'xcscope)
 (vendor 'xcscope+)
+(vendor 'jflex-mode)
 
 (load-theme 'monokai t)
 
