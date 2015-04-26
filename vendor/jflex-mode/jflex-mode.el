@@ -34,8 +34,7 @@
 (defalias 'jflex-indent-command 'c-indent-command)
 
 (defconst jflex-font-lock-keywords
-  (append 
-   '( 
+  '( 
      ("^%%" . font-lock-reference-face) 
      "^%{"
      "^%init{"
@@ -101,7 +100,6 @@
      "<<EOF>>" ; special <<EOF>> symbol
      ("<[ \t]*[a-zA-Z][0-9a-zA-Z_]+[ \t]*\\(,[ \t]*[a-zA-Z][0-9a-zA-Z_]+[ \t]*\\)*>" . font-lock-type-face) ; lex state list
      )
-   java-font-lock-keywords-2)
   "JFlex keywords for font-lock mode")
 
 (put 'jflex-mode 'font-lock-defaults
