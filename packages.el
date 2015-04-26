@@ -17,7 +17,7 @@
            ibuffer ido color-theme yasnippet android-mode less-css-mode
            slim-mode coffee-mode expand-region window-number
            whitespace linum org iy-go-to-char monokai-theme glsl-mode
-           emacs-eclim projectile flx-ido)
+           emacs-eclim projectile flx-ido mvn)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
