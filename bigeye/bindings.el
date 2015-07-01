@@ -11,3 +11,4 @@
 (global-set-key (kbd "C-c g") 'magit-status)
 
 (global-set-key (kbd "C-c m") 'mvn-last)
+(global-set-key (kbd "<S-SPC>") 'toggle-input-method)
