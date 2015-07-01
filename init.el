@@ -38,7 +38,7 @@
 ;; (vendor 'restclient)
 (load "bigeye/projectile")
 (load "bigeye/javacc-mode")
-
+(load "bigeye/editing")
 (load "bigeye/color")
 
 (vendor 'xcscope)
@@ -53,3 +53,4 @@
 ;; (load-dir "~/.emacs.d/bigeye/")
 
 (load "local" 'noerror)
+
