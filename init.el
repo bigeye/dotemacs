@@ -39,6 +39,7 @@
 (load "bigeye/projectile")
 (load "bigeye/javacc-mode")
 (load "bigeye/editing")
+(load "bigeye/show-paren-mode")
 (load "bigeye/color")
 
 (vendor 'xcscope)
