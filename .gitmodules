@@ -24,7 +24,7 @@
 	url = https://github.com/emacsmirror/jdee.git
 [submodule "vendor/cedet"]
 	path = vendor/cedet
-	url = https://github.com/emacsmirror/cedet.git
+	url = git://git.code.sf.net/p/cedet/git
 [submodule "vendor/ace-jump-mode"]
 	path = vendor/ace-jump-mode
 	url = git://github.com/winterTTr/ace-jump-mode.git

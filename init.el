@@ -9,7 +9,6 @@
 (load "packages")
 
 (load "bigeye/defuns")
-
 (load "bigeye/eshell")
 (load "bigeye/erc")
 (load "bigeye/auto-complete")
@@ -41,6 +40,13 @@
 (load "bigeye/editing")
 (load "bigeye/show-paren-mode")
 (load "bigeye/color")
+
+;; For using JAVA, it is necessary to use upstream cedet.
+;; It seems not to work well.
+;; (load "bigeye/cedet")
+
+;; Use emacs built-in cedet
+(load "bigeye/semantic-mode")
 
 (vendor 'xcscope)
 (vendor 'xcscope+)

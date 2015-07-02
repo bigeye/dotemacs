@@ -1,40 +1,79 @@
-;; Load CEDET.
-;; See cedet/common/cedet.info for configuration details.
-;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
-;; CEDET component (including EIEIO) gets activated by another 
-;; package (Gnus, auth-source, ...).
-(load-file (concat my-dotemacs-path "/.emacs.d/cedet/common/cedet.el"))
+;;; This code snippet is from http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html
+;;; minimial-cedet-config.el --- Working configuration for CEDET from bzr
+ 
+;; Copyright (C) Alex Ott
+;;
+;; Author: Alex Ott <alexott@gmail.com>
+;; Keywords: cedet, C++, Java
+;; Requirements: CEDET from bzr (http://cedet.sourceforge.net/bzr-repo.shtml)
+ 
+;; Do checkout of fresh CEDET, and use this config (don't forget to change path below)
+ 
+(setq cedet-root-path (file-name-as-directory "~/.emacs.d/vendor/cedet/"))
+ 
+(load-file (concat cedet-root-path "cedet-devel-load.el"))
+(add-to-list 'load-path (concat cedet-root-path "contrib"))
+ 
+;; select which submodes we want to activate
+(add-to-list 'semantic-default-submodes 'global-semantic-mru-bookmark-mode)
+(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-scheduler-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode)
+(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
+ 
+;; Activate semantic
+(semantic-mode 1)
 
-;; Enable EDE (Project Management) features
+(require 'semantic/db-javap)
+ 
+;; load contrib library
+(require 'eassist)
+ 
+;; customisation of modes
+(defun alexott/cedet-hook ()
+  (local-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
+  (local-set-key "\C-c?" 'semantic-ia-complete-symbol)
+  ;;
+  (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
+  (local-set-key "\C-c=" 'semantic-decoration-include-visit)
+ 
+  (local-set-key "\C-cj" 'semantic-ia-fast-jump)
+  (local-set-key "\C-cq" 'semantic-ia-show-doc)
+  (local-set-key "\C-cs" 'semantic-ia-show-summary)
+  (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle)
+  )
+(add-hook 'c-mode-common-hook 'alexott/cedet-hook)
+(add-hook 'java-mode-hook 'alexott/cedet-hook)
+(add-hook 'lisp-mode-hook 'alexott/cedet-hook)
+(add-hook 'scheme-mode-hook 'alexott/cedet-hook)
+(add-hook 'emacs-lisp-mode-hook 'alexott/cedet-hook)
+(add-hook 'erlang-mode-hook 'alexott/cedet-hook)
+ 
+(defun alexott/c-mode-cedet-hook ()
+  (local-set-key "\C-ct" 'eassist-switch-h-cpp)
+  (local-set-key "\C-xt" 'eassist-switch-h-cpp)
+  (local-set-key "\C-ce" 'eassist-list-methods)
+  (local-set-key "\C-c\C-r" 'semantic-symref)
+  )
+(add-hook 'c-mode-common-hook 'alexott/c-mode-cedet-hook)
+ 
+(semanticdb-enable-gnu-global-databases 'c-mode t)
+(semanticdb-enable-gnu-global-databases 'c++-mode t)
+ 
+(when (cedet-ectag-version-check t)
+  (semantic-load-enable-primary-ectags-support))
+ 
+;; SRecode
+(global-srecode-minor-mode 1)
+ 
+;; EDE
 (global-ede-mode 1)
-
-;; Enable EDE for a pre-existing C++ project
-;; (ede-cpp-root-project "NAME" :file "~/myproject/Makefile")
-
-
-;; Enabling Semantic (code-parsing, smart completion) features
-;; Select one of the following:
-
-;; * This enables the database and idle reparse engines
-(semantic-load-enable-minimum-features)
-
-;; * This enables some tools useful for coding, such as summary mode,
-;;   imenu support, and the semantic navigator
-(semantic-load-enable-code-helpers)
-
-;; * This enables even more coding tools such as intellisense mode,
-;;   decoration mode, and stickyfunc mode (plus regular code helpers)
-;; (semantic-load-enable-gaudy-code-helpers)
-
-;; * This enables the use of Exuberant ctags if you have it installed.
-;;   If you use C++ templates or boost, you should NOT enable it.
-;; (semantic-load-enable-all-exuberent-ctags-support)
-;;   Or, use one of these two types of support.
-;;   Add support for new languages only via ctags.
-;; (semantic-load-enable-primary-exuberent-ctags-support)
-;;   Add support for using ctags as a backup parser.
-;; (semantic-load-enable-secondary-exuberent-ctags-support)
-
-;; Enable SRecode (Template management) minor-mode.
-;; (global-srecode-minor-mode 1)
-
+(ede-enable-generic-projects)
+ 
+ 
+;; Setup JAVA....
+(require 'cedet-java)
+ 
+;;; minimial-cedet-config.el ends here
