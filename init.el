@@ -23,12 +23,12 @@
 (load "bigeye/org-mode")
 (load "bigeye/ibuffer")
 (load "bigeye/emacs-eclim")
-(load "bigeye/ido-mode")
-(load "bigeye/flx-ido-mode")
+;; (load "bigeye/ido-mode")
+;; (load "bigeye/flx-ido-mode")
 (load "bigeye/compile")
-;; (load "bigeye/helm")
-;; (load "bigeye/color-theme")
 (load "bigeye/yasnippet")
+(load "bigeye/helm")
+;; (load "bigeye/color-theme")
 (load "bigeye/coffee-mode")
 (load "bigeye/expand-region")
 (load "bigeye/iy-go-to-char")
@@ -60,4 +60,3 @@
 ;; (load-dir "~/.emacs.d/bigeye/")
 
 (load "local" 'noerror)
-

@@ -17,7 +17,9 @@
            ibuffer ido color-theme yasnippet android-mode less-css-mode
            slim-mode coffee-mode expand-region window-number
            whitespace linum org iy-go-to-char monokai-theme glsl-mode
-           emacs-eclim projectile flx-ido mvn)
+           emacs-eclim projectile flx-ido mvn anaconda-mode
+           company company-anaconda company-c-headers
+           company-go company-irony company-web)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
