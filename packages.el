@@ -7,7 +7,6 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 (package-initialize)
-(package-initialize)
 
 (when (not package-archive-contents)
   (package-refresh-contents))
@@ -19,7 +18,7 @@
            whitespace linum org iy-go-to-char monokai-theme glsl-mode
            emacs-eclim projectile flx-ido mvn anaconda-mode
            company company-anaconda company-c-headers
-           company-go company-irony company-web)
+           company-go company-irony company-web function-args)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)

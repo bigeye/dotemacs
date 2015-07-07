@@ -11,7 +11,9 @@
 (load "bigeye/defuns")
 (load "bigeye/eshell")
 (load "bigeye/erc")
-(load "bigeye/auto-complete")
+
+;; (load "bigeye/auto-complete")
+
 (load "bigeye/whitespace")
 (load "bigeye/line-number")
 (load "bigeye/jabber")
@@ -27,7 +29,6 @@
 ;; (load "bigeye/flx-ido-mode")
 (load "bigeye/compile")
 (load "bigeye/yasnippet")
-(load "bigeye/helm")
 ;; (load "bigeye/color-theme")
 (load "bigeye/coffee-mode")
 (load "bigeye/expand-region")
@@ -35,11 +36,15 @@
 (load "bigeye/window-number")
 (load "bigeye/glsl-mode")
 ;; (vendor 'restclient)
-(load "bigeye/projectile")
+
+(load "bigeye/helm")
+(load "bigeye/projectile.el")
+(load "bigeye/gtags")
 (load "bigeye/javacc-mode")
 (load "bigeye/editing")
 (load "bigeye/show-paren-mode")
 (load "bigeye/color")
+(load "bigeye/gdb")
 
 ;; For using JAVA, it is necessary to use upstream cedet.
 ;; It seems not to work well.
@@ -53,6 +58,8 @@
 (vendor 'jflex-mode)
 
 (load-theme 'monokai t)
+
+(load "bigeye/company-mode")
 
 ;; key binding should be in last part
 (load "bigeye/bindings")
