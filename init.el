@@ -45,6 +45,7 @@
 (load "bigeye/show-paren-mode")
 (load "bigeye/color")
 (load "bigeye/gdb")
+(load "bigeye/powerline")
 
 ;; For using JAVA, it is necessary to use upstream cedet.
 ;; It seems not to work well.

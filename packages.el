@@ -1,7 +1,8 @@
 (require 'package)
 
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;; Outdated repo
+;; (add-to-list 'package-archives
+;;              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -18,7 +19,8 @@
            whitespace linum org iy-go-to-char monokai-theme glsl-mode
            emacs-eclim projectile flx-ido mvn anaconda-mode
            company company-anaconda company-c-headers
-           company-go company-irony company-web function-args)
+           company-go company-irony company-web function-args
+           powerline)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
