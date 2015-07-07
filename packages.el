@@ -20,6 +20,7 @@
            emacs-eclim projectile flx-ido mvn anaconda-mode
            company company-anaconda company-c-headers
            company-go company-irony company-web function-args
+           workgroups2
            powerline)
   "A list of packages to ensure are installed at launch.")
 
