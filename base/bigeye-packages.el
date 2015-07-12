@@ -60,6 +60,7 @@
     smartparens
     clean-aindent-mode
     undo-tree
+    ibuffer-vc
     )
   "A list of packages to ensure are installed at launch.")
 
