@@ -48,6 +48,7 @@
 (require 'bigeye-gdb)
 (require 'bigeye-workgroups2)
 (require 'bigeye-powerline)
+(require 'bigeye-android-mode)
 
 ;; For using JAVA, it is necessary to use upstream cedet.
 ;; It seems not to work well.

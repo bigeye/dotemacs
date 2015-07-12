@@ -49,6 +49,18 @@
            "* TODO %?\n%T")
           ("m" "Movie" entry (file+headline "~/org/movie.org" "Movies")
            "* TODO %?\n%T\n:PROPERTIES:\n:DIRECTOR:\n:STARS:\n:RELEASE DATE:\n:RECOMMENDED BY:\n:END:" )))
+  (setq
+   org-agenda-files (quote ("~/org/"))
+   org-default-notes-file (concat org-directory "/notes.org")
+   org-log-done (quote time)
+   org-log-into-drawer t
+   org-mobile-directory "~/org/mobileorg"
+   org-refile-targets (quote ((nil :maxlevel . 2) (org-agenda-files :maxlevel . 1)))
+   org-src-fontify-natively t
+   org-tags-exclude-from-inheritance (quote ("crypt"))
+   org-todo-keywords (quote ((sequence "TODO(t!)" "|" "DONE(d!)") (sequence "REPORT(r!)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f@/!)") (sequence "|" "CANCELED(c!)")))
+   )
+
 
   (org-mobile-sync-enable)
 

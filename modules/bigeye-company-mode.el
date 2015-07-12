@@ -8,6 +8,8 @@
      (add-to-list 'company-c-headers-path-system "/usr/include/c++/4.9/")
      ))
 
+(setq company-idle-delay 0.3
+      company-minimum-prefix-length 2)
 ;;      (define-key c-mode-map   (kbd "<tab>") 'company-complete)
 ;;      (define-key c++-mode-map (kbd "<tab>") 'company-complete)))
 
