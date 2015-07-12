@@ -51,6 +51,8 @@
 (require 'bigeye-android-mode)
 (require 'bigeye-volatile-highlights)
 (require 'bigeye-smartparens)
+(require 'bigeye-clean-aindent-mode)
+(require 'bigeye-undo-tree)
 
 ;; For using JAVA, it is necessary to use upstream cedet.
 ;; It seems not to work well.
