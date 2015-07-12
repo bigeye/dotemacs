@@ -50,6 +50,7 @@
 (require 'bigeye-powerline)
 (require 'bigeye-android-mode)
 (require 'bigeye-volatile-highlights)
+(require 'bigeye-smartparens)
 
 ;; For using JAVA, it is necessary to use upstream cedet.
 ;; It seems not to work well.

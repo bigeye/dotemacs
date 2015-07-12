@@ -57,6 +57,7 @@
     magit
     duplicate-thing
     volatile-highlights
+    smartparens
     )
   "A list of packages to ensure are installed at launch.")
 
