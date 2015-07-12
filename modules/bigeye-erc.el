@@ -20,7 +20,7 @@
 
 (ignore-errors
   (load "~/.erc_accounts" t))
-(global-set-key (kbd "C-x C-j C-;") 'erc-track-switch-buffer)
+;; (global-set-key (kbd "C-x C-j C-;") 'erc-track-switch-buffer)
 
 
 (provide 'bigeye-erc)
