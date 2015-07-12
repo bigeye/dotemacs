@@ -55,6 +55,8 @@
 (require 'bigeye-undo-tree)
 (require 'bigeye-backup)
 (require 'bigeye-dired)
+(require 'bigeye-vlf)
+(require 'bigeye-flyspell)
 
 ;; For using JAVA, it is necessary to use upstream cedet.
 ;; It seems not to work well.

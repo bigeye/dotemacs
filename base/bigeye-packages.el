@@ -62,6 +62,8 @@
     undo-tree
     ibuffer-vc
     dired+
+    ztree
+    vlf
     )
   "A list of packages to ensure are installed at launch.")
 
