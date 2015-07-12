@@ -10,6 +10,9 @@
       menu-bar-mode nil
       tool-bar-mode nil)
 
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
 (if (eq system-type 'darwin)
   (progn
     (setq mac-option-key-is-meta nil)
