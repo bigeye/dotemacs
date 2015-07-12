@@ -64,6 +64,13 @@
     dired+
     ztree
     vlf
+    flycheck
+    flycheck-tip
+    info+
+    discover-my-major
+    help+
+    help-fns+
+    rainbow-mode
     )
   "A list of packages to ensure are installed at launch.")
 

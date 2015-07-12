@@ -57,6 +57,9 @@
 (require 'bigeye-dired)
 (require 'bigeye-vlf)
 (require 'bigeye-flyspell)
+(require 'bigeye-flycheck)
+(require 'bigeye-help)
+(require 'bigeye-rainbow-mode)
 
 ;; For using JAVA, it is necessary to use upstream cedet.
 ;; It seems not to work well.

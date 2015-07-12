@@ -46,4 +46,7 @@ point reaches the beginning or end of the buffer, stop there."
 
 (global-set-key (kbd "C-a") 'prelude-move-beginning-of-line)
 
+(winner-mode 1)
+
 (provide 'bigeye-editing)
+;;; bigeye-editing ends here

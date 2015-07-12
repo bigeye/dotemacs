@@ -39,4 +39,7 @@
 			       eshell-visual-commands))))
 )
 
+(require 'shell-pop)
+(global-set-key (kbd "C-c t") 'shell-pop)
+
 (provide 'bigeye-eshell)
