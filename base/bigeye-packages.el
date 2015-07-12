@@ -61,6 +61,7 @@
     clean-aindent-mode
     undo-tree
     ibuffer-vc
+    dired+
     )
   "A list of packages to ensure are installed at launch.")
 
