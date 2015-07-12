@@ -55,6 +55,8 @@
     helm-projectile
     helm-gtags
     magit
+    duplicate-thing
+    volatile-highlights
     )
   "A list of packages to ensure are installed at launch.")
 
