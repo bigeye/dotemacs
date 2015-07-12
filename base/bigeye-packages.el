@@ -51,6 +51,10 @@
     powerline
     key-chord
     eproject
+    helm
+    helm-projectile
+    helm-gtags
+    magit
     )
   "A list of packages to ensure are installed at launch.")
 
