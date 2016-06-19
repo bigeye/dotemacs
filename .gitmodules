@@ -1,6 +1,3 @@
-[submodule "vendor/android-mode"]
-	path = vendor/android-mode
-	url = https://github.com/remvee/android-mode
 [submodule "vendor/restclient"]
 	path = vendor/restclient
 	url = https://github.com/pashky/restclient.el.git
@@ -87,4 +84,7 @@
 	url = git://github.com/emacsmirror/xcscope-plus.git
 [submodule "vendor/xcscope"]
 	path = vendor/xcscope
-	url = git://github.com/emacsattic/xcscope.git
+        url = https://github.com/dkogan/xcscope.el.git
+[submodule "vendor/android-mode"]
+	path = vendor/android-mode
+	url = https://github.com/bigeye/android-mode.git
