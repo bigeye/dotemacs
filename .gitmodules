@@ -84,7 +84,7 @@
 	url = git://github.com/emacsmirror/xcscope-plus.git
 [submodule "vendor/xcscope"]
 	path = vendor/xcscope
-        url = https://github.com/dkogan/xcscope.el.git
+	url = https://github.com/dkogan/xcscope.el.git
 [submodule "vendor/android-mode"]
 	path = vendor/android-mode
 	url = https://github.com/bigeye/android-mode.git

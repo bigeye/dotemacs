@@ -2,6 +2,8 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 (require 'flycheck-tip)
-(flycheck-tip-use-timer 'verbose)
+(require 'flycheck-pos-tip)
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
 
 (provide 'bigeye-flycheck)

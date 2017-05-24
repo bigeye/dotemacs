@@ -72,6 +72,8 @@
     help-fns+
     rainbow-mode
     shell-pop
+    mark-multiple
+    flycheck-pos-tip
     )
   "A list of packages to ensure are installed at launch.")
 
