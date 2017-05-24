@@ -80,6 +80,15 @@
 ;; (vendor 'jflex-mode)
 (require 'bigeye-java-mode)
 
+(use-package avy
+  :bind ("C-c SPC" . avy-goto-word-or-subword-1)
+  :ensure t)
+
+(use-package ace-window
+  :bind ("M-p" . ace-window)
+  :ensure t)
+
+
 (load-theme 'monokai t)
 
 (require 'bigeye-company-mode)
