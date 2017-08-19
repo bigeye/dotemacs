@@ -7,7 +7,7 @@
  '(auto-save-default nil)
  '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-generic-program "google-chrome")
- '(c-basic-offset 4)
+ '(c-basic-offset 4 t)
  '(compilation-error-regexp-alist
    (quote
     (("\\[ERROR\\] \\(.+?\\):\\[\\([0-9]+\\),\\([0-9]+\\)\\].*" 1 2 3)
@@ -25,11 +25,11 @@
                                  (setq c-comment-start-regexp "(@|/(/|[*][*]?))")
                                  (modify-syntax-entry 64 "< b" java-mode-syntax-table))
                                (lambda nil
-                                 (setq whitespace-line-column 100)))))
+                                 (setq whitespace-line-column 100)))) t)
  '(magit-use-overlays nil)
  '(package-selected-packages
    (quote
-    (ace-window avy json-mode helm-bind-key bind-key mark-multiple shell-pop rainbow-mode help-fns+ help+ discover-my-major info+ flycheck-tip flycheck vlf ztree dired+ ibuffer-vc undo-tree clean-aindent-mode smartparens volatile-highlights duplicate-thing magit yasnippet workgroups2 window-number slim-mode powerline mvn monokai-theme markdown-mode less-css-mode key-chord jabber iy-go-to-char helm-projectile helm-gtags glsl-mode function-args flx-ido erc-view-log erc-hl-nicks eproject emacs-eclim company-web company-irony company-go company-c-headers company-anaconda color-theme coffee-mode auto-complete android-mode ace-jump-mode)))
+    (eclim expand-region ace-window avy json-mode helm-bind-key bind-key mark-multiple shell-pop rainbow-mode help-fns+ help+ discover-my-major info+ flycheck-tip flycheck vlf ztree dired+ ibuffer-vc undo-tree clean-aindent-mode smartparens volatile-highlights duplicate-thing magit yasnippet workgroups2 window-number slim-mode powerline mvn monokai-theme markdown-mode less-css-mode key-chord jabber iy-go-to-char helm-projectile helm-gtags glsl-mode function-args flx-ido erc-view-log erc-hl-nicks eproject emacs-eclim company-web company-irony company-go company-c-headers company-anaconda color-theme coffee-mode auto-complete android-mode ace-jump-mode)))
  '(projectile-ignored-projects
    (quote
     ("/usr/local/google/home/donghyun/twodroid/master/vendor/google_experimental/")))

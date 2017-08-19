@@ -5,6 +5,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/base")
 (add-to-list 'load-path "~/.emacs.d/modules")
 ;; (add-to-list 'load-path "~/.emacs.d/vendor")
@@ -39,7 +40,11 @@
 (require 'bigeye-yasnippet)
 ;; (require 'bigeye-color-theme)
 (require 'bigeye-coffee-mode)
-(require 'bigeye-expand-region)
+(use-package expand-region
+  :bind ("C-=" . er/expand-region)
+  :ensure t)
+
+
 (require 'bigeye-iy-go-to-char)
 (require 'bigeye-window-number)
 (require 'bigeye-glsl-mode)
@@ -88,7 +93,6 @@
   :bind ("M-p" . ace-window)
   :ensure t)
 
-
 (load-theme 'monokai t)
 
 (require 'bigeye-company-mode)
@@ -98,4 +102,4 @@
 
 ;; (load-dir "~/.emacs.d/bigeye/")
 
-(load "local" 'noerror)
+(load "local")

@@ -35,7 +35,7 @@
     iy-go-to-char
     monokai-theme
     glsl-mode
-    emacs-eclim
+    eclim
     projectile
     flx-ido
     mvn
@@ -74,6 +74,7 @@
     shell-pop
     mark-multiple
     flycheck-pos-tip
+    bind-key
     )
   "A list of packages to ensure are installed at launch.")
 
