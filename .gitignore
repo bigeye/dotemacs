@@ -5,6 +5,7 @@ auto-save-list/
 cache/
 elpa/
 *~
+local
 local.el
 session.*
 url/*

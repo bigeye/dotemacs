@@ -5,7 +5,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/local")
 (add-to-list 'load-path "~/.emacs.d/base")
 (add-to-list 'load-path "~/.emacs.d/modules")
 ;; (add-to-list 'load-path "~/.emacs.d/vendor")
@@ -37,7 +37,11 @@
 ;; (require 'bigeye-ido-mode)
 ;; (require 'bigeye-flx-ido-mode)
 (require 'bigeye-compile)
-(require 'bigeye-yasnippet)
+(use-package yasnippet
+  :config (progn
+            (add-to-list 'yas-snippet-dirs "~/.emacs.d/local/snippets")
+            (yas-global-mode 1))
+  :ensure t)
 ;; (require 'bigeye-color-theme)
 (require 'bigeye-coffee-mode)
 (use-package expand-region
