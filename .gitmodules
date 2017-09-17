@@ -88,3 +88,6 @@
 [submodule "vendor/android-mode"]
 	path = vendor/android-mode
 	url = https://github.com/bigeye/android-mode.git
+[submodule "vendor/java-mode-indent-annotations"]
+	path = vendor/java-mode-indent-annotations
+	url = https://github.com/emacsmirror/java-mode-indent-annotations.git
