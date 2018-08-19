@@ -70,7 +70,6 @@
 (require 'bigeye-clean-aindent-mode)
 (require 'bigeye-undo-tree)
 (require 'bigeye-backup)
-(require 'bigeye-dired)
 (require 'bigeye-vlf)
 (require 'bigeye-flyspell)
 (require 'bigeye-flycheck)
@@ -89,6 +88,10 @@
 ;; (vendor 'jflex-mode)
 (require 'bigeye-java-mode)
 
+;; Load packages from submodule
+(vendor 'dired+)
+(vendor 'java-mode-indent-annotations)
+
 (use-package avy
   :bind ("C-c SPC" . avy-goto-word-or-subword-1)
   :ensure t)
@@ -106,4 +109,4 @@
 
 ;; (load-dir "~/.emacs.d/bigeye/")
 
-(load "local")
+(load "local" t)

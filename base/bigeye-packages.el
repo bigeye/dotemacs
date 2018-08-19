@@ -47,7 +47,6 @@
     company-irony
     company-web
     function-args
-    workgroups2
     powerline
     key-chord
     eproject
@@ -61,20 +60,17 @@
     clean-aindent-mode
     undo-tree
     ibuffer-vc
-    dired+
     ztree
     vlf
     flycheck
     flycheck-tip
-    info+
     discover-my-major
-    help+
-    help-fns+
     rainbow-mode
     shell-pop
     mark-multiple
     flycheck-pos-tip
     bind-key
+    use-package
     )
   "A list of packages to ensure are installed at launch.")
 
