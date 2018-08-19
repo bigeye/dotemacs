@@ -1,99 +1,93 @@
-# [submodule "vendor/restclient"]
-# 	path = vendor/restclient
-# 	url = https://github.com/pashky/restclient.el.git
-# [submodule "vendor/less-css-mode"]
-# 	path = vendor/less-css-mode
-# 	url = https://github.com/purcell/less-css-mode.git
-# [submodule "vendor/coffee-mode"]
-# 	path = vendor/coffee-mode
-# 	url = https://github.com/defunkt/coffee-mode.git
-# [submodule "vendor/slim-mode"]
-# 	path = vendor/slim-mode
-# 	url = https://github.com/slim-template/emacs-slim.git
-# [submodule "vendor/ecb"]
-# 	path = vendor/ecb
-# 	url = https://github.com/emacsmirror/ecb.git
-# [submodule "vendor/markdown-mode"]
-# 	path = vendor/markdown-mode
-# 	url = https://github.com/defunkt/markdown-mode.git
-# [submodule "vendor/jde"]
-# 	path = vendor/jde
-# 	url = https://github.com/emacsmirror/jdee.git
-# [submodule "vendor/cedet"]
-# 	path = vendor/cedet
-# 	url = git://git.code.sf.net/p/cedet/git
-# [submodule "vendor/ace-jump-mode"]
-# 	path = vendor/ace-jump-mode
-# 	url = git://github.com/winterTTr/ace-jump-mode.git
-# [submodule "vendor/expand-region"]
-# 	path = vendor/expand-region
-# 	url = git://github.com/magnars/expand-region.el.git
-# [submodule "vendor/key-chord"]
-# 	path = vendor/key-chord
-# 	url = git://github.com/emacsmirror/key-chord.git
-# [submodule "vendor/iy-go-to-char"]
-# 	path = vendor/iy-go-to-char
-# 	url = git://github.com/emacsmirror/iy-go-to-char.git
-# [submodule "vendor/mark-multiple"]
-# 	path = vendor/mark-multiple
-# 	url = git://github.com/magnars/mark-multiple.el.git
-# [submodule "vendor/org-mode"]
-# 	path = vendor/org-mode
-# 	url = git://orgmode.org/org-mode.git
-# [submodule "vendor/dictionary"]
-# 	path = vendor/dictionary
-# 	url = https://github.com/emacsmirror/dictionary.git
-# [submodule "vendor/anything-config"]
-# 	path = vendor/anything-config
-# 	url = git://repo.or.cz/anything-config.git
-# [submodule "vendor/switch-window"]
-# 	path = vendor/switch-window
-# 	url = git://github.com/dimitri/switch-window.git
-# [submodule "vendor/window-number"]
-# 	path = vendor/window-number
-# 	url = git://github.com/emacsmirror/window-number.git
-# [submodule "vendor/eproject"]
-# 	path = vendor/eproject
-# 	url = http://repo.or.cz/r/eproject.git
-# [submodule "vendor/emacs-eclim"]
-# 	path = vendor/emacs-eclim
-# 	url = git://github.com/senny/emacs-eclim.git
-# [submodule "vendor/helm"]
-# 	path = vendor/helm
-# 	url = git://github.com/emacs-helm/helm.git
-# [submodule "vendor/color-theme"]
-# 	path = vendor/color-theme
-# 	url = git@github.com:bigeye/color-theme.git
-# [submodule "vendor/yasnippet"]
-# 	path = vendor/yasnippet
-# 	url = git://github.com/capitaomorte/yasnippet.git
-# [submodule "vendor/auto-complete"]
-# 	path = vendor/auto-complete
-# 	url = git://github.com/auto-complete/auto-complete.git
-# [submodule "vendor/jabber"]
-# 	path = vendor/jabber
-# 	url = git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber
-# [submodule "vendor/autosmiley"]
-# 	path = vendor/autosmiley
-# 	url = git://github.com/emacsmirror/autosmiley.git
-# [submodule "vendor/jade-mode"]
-# 	path = vendor/jade-mode
-# 	url = git://github.com/brianc/jade-mode.git
-# [submodule "vendor/xcscope+"]
-# 	path = vendor/xcscope+
-# 	url = git://github.com/emacsmirror/xcscope-plus.git
-# [submodule "vendor/xcscope"]
-# 	path = vendor/xcscope
-# 	url = https://github.com/dkogan/xcscope.el.git
-# [submodule "vendor/android-mode"]
-# 	path = vendor/android-mode
-# 	url = https://github.com/bigeye/android-mode.git
-# [submodule "vendor/java-mode-indent-annotations"]
-# 	path = vendor/java-mode-indent-annotations
-# 	url = https://github.com/emacsmirror/java-mode-indent-annotations.git
-[submodule "vendor/dired+"]
-	path = vendor/dired+
-	url = https://github.com/emacsmirror/dired-plus.git
+[submodule "vendor/restclient"]
+	path = vendor/restclient
+	url = https://github.com/pashky/restclient.el.git
+[submodule "vendor/less-css-mode"]
+	path = vendor/less-css-mode
+	url = https://github.com/purcell/less-css-mode.git
+[submodule "vendor/coffee-mode"]
+	path = vendor/coffee-mode
+	url = https://github.com/defunkt/coffee-mode.git
+[submodule "vendor/slim-mode"]
+	path = vendor/slim-mode
+	url = https://github.com/slim-template/emacs-slim.git
+[submodule "vendor/ecb"]
+	path = vendor/ecb
+	url = https://github.com/emacsmirror/ecb.git
+[submodule "vendor/markdown-mode"]
+	path = vendor/markdown-mode
+	url = https://github.com/defunkt/markdown-mode.git
+[submodule "vendor/jde"]
+	path = vendor/jde
+	url = https://github.com/emacsmirror/jdee.git
+[submodule "vendor/cedet"]
+	path = vendor/cedet
+	url = git://git.code.sf.net/p/cedet/git
+[submodule "vendor/ace-jump-mode"]
+	path = vendor/ace-jump-mode
+	url = git://github.com/winterTTr/ace-jump-mode.git
+[submodule "vendor/expand-region"]
+	path = vendor/expand-region
+	url = git://github.com/magnars/expand-region.el.git
+[submodule "vendor/key-chord"]
+	path = vendor/key-chord
+	url = git://github.com/emacsmirror/key-chord.git
+[submodule "vendor/iy-go-to-char"]
+	path = vendor/iy-go-to-char
+	url = git://github.com/emacsmirror/iy-go-to-char.git
+[submodule "vendor/mark-multiple"]
+	path = vendor/mark-multiple
+	url = git://github.com/magnars/mark-multiple.el.git
+[submodule "vendor/dictionary"]
+	path = vendor/dictionary
+	url = https://github.com/emacsmirror/dictionary.git
+[submodule "vendor/anything-config"]
+	path = vendor/anything-config
+	url = git://repo.or.cz/anything-config.git
+[submodule "vendor/switch-window"]
+	path = vendor/switch-window
+	url = git://github.com/dimitri/switch-window.git
+[submodule "vendor/window-number"]
+	path = vendor/window-number
+	url = git://github.com/emacsmirror/window-number.git
+[submodule "vendor/eproject"]
+	path = vendor/eproject
+	url = http://repo.or.cz/r/eproject.git
+[submodule "vendor/emacs-eclim"]
+	path = vendor/emacs-eclim
+	url = git://github.com/senny/emacs-eclim.git
+[submodule "vendor/helm"]
+	path = vendor/helm
+	url = git://github.com/emacs-helm/helm.git
+[submodule "vendor/color-theme"]
+	path = vendor/color-theme
+	url = git@github.com:bigeye/color-theme.git
+[submodule "vendor/yasnippet"]
+	path = vendor/yasnippet
+	url = git://github.com/capitaomorte/yasnippet.git
+[submodule "vendor/auto-complete"]
+	path = vendor/auto-complete
+	url = git://github.com/auto-complete/auto-complete.git
+[submodule "vendor/jabber"]
+	path = vendor/jabber
+	url = git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber
+[submodule "vendor/autosmiley"]
+	path = vendor/autosmiley
+	url = git://github.com/emacsmirror/autosmiley.git
+[submodule "vendor/jade-mode"]
+	path = vendor/jade-mode
+	url = git://github.com/brianc/jade-mode.git
+[submodule "vendor/xcscope+"]
+	path = vendor/xcscope+
+	url = git://github.com/emacsmirror/xcscope-plus.git
+[submodule "vendor/xcscope"]
+	path = vendor/xcscope
+	url = https://github.com/dkogan/xcscope.el.git
+[submodule "vendor/android-mode"]
+	path = vendor/android-mode
+	url = https://github.com/bigeye/android-mode.git
 [submodule "vendor/java-mode-indent-annotations"]
 	path = vendor/java-mode-indent-annotations
 	url = https://github.com/emacsmirror/java-mode-indent-annotations.git
+[submodule "vendor/dired+"]
+	path = vendor/dired+
+	url = https://github.com/emacsmirror/dired-plus.git
