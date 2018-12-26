@@ -6,4 +6,9 @@
 (helm-projectile-on)
 (setq projectile-enable-caching t)
 
+; (projectile-project-type) takes too much time
+(setq projectile-mode-line
+         '(:eval (format " Projectile[%s]"
+                        (projectile-project-name))))
+
 (provide 'bigeye-projectile)
