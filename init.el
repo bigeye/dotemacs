@@ -100,6 +100,10 @@
   :bind ("M-p" . ace-window)
   :ensure t)
 
+(use-package modern-cpp-font-lock
+  :config (modern-c++-font-lock-global-mode t)
+  :ensure t)
+
 (load-theme 'monokai t)
 
 (require 'bigeye-company-mode)
