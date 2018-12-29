@@ -4,7 +4,7 @@
 
 
 (defun my-java-mode-hook ()
-  (require 'cc-mode-expansions)
+  (require 'cc-mode-expansions
   (er/add-cc-mode-expansions)
   (setq c-basic-offset 2)
   (c-set-offset 'arglist-cont-nonempty '++)

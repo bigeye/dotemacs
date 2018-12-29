@@ -50,20 +50,32 @@
 
 
 (require 'bigeye-iy-go-to-char)
-(require 'bigeye-window-number)
+;(require 'bigeye-window-number)
 (require 'bigeye-glsl-mode)
 ;; (vendor 'restclient)
 
 (require 'bigeye-helm)
 (require 'bigeye-projectile)
-(require 'bigeye-gtags)
+;; Disabled due to tramp error
+;(require 'bigeye-gtags)
 (require 'bigeye-javacc-mode)
 (require 'bigeye-editing)
 (require 'bigeye-show-paren-mode)
 (require 'bigeye-color)
 (require 'bigeye-gdb)
 (require 'bigeye-workgroups2)
-(require 'bigeye-powerline)
+
+;(require 'bigeye-powerline)
+(use-package smart-mode-line
+  :config (progn
+            (setq sml/theme 'dark)
+            (setq rm-blacklist
+                  (mapconcat 'identity
+                         '("Projectile.*" "wg.*" "Undo-Tree.*")
+                         "\\|"))
+            (sml/setup))
+  :ensure t)
+
 (require 'bigeye-android-mode)
 (require 'bigeye-volatile-highlights)
 (require 'bigeye-smartparens)
@@ -110,6 +122,8 @@
 
 ;; key binding should be in last part
 (require 'bigeye-bindings)
+
+(global-subword-mode)
 
 ;; (load-dir "~/.emacs.d/bigeye/")
 
